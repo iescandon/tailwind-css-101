@@ -1,9 +1,6 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
-
-const inter = Inter({ subsets: ["latin"] });
+// import { Inter } from "next/font/google";
+// const inter = Inter({ subsets: ["latin"] });
+import Accordion from "@/components/accordion";
 
 const Home = () => {
   console.log("home page");
@@ -18,7 +15,7 @@ const Home = () => {
         {/* hero image section */}
         <section className="w-full flex flex-col justify-center items-center text-center">
           <h1 className="font-bold text-[60px] leading-[3.5rem] pt-8">
-            Rapidly style modern websites without ever leaving your HTML
+            Rapidly style modern websites<br></br>without ever leaving your HTML
           </h1>
           <img src="https://i.imgur.com/TnOumqJ.png" className="h-[325px]" />
         </section>
@@ -52,6 +49,7 @@ const Home = () => {
               </p>
             </div>
           </section>
+          {/* <Accordion /> */}
           {/* tailwind advantages */}
           <section className="h-[325px] w-full flex flex-row justify-around items-center">
             <a
@@ -99,7 +97,7 @@ const Home = () => {
             </h1>
             <ol className="text-[#263238] w-3/4 space-y-4">
               <li>
-                <span className="font-bold">1. Install Tailwind CSS</span>You
+                <span className="font-bold">1. Install Tailwind CSS</span><br></br>You
                 can install Tailwind using the Tailwind CLI tool or by importing
                 the CDN directly in your code. For CodePen, we will be using the
                 CDN. Click on the cog button on the top right of the JS pane and
@@ -124,7 +122,7 @@ const Home = () => {
                 your specific use case/framework.
               </li>
               <li>
-                <span className="font-bold">2. Search Docs</span>Use the quick
+                <span className="font-bold">2. Search Docs</span><br></br>Use the quick
                 search in the{" "}
                 <a
                   href="https://tailwindcss.com/"
@@ -145,7 +143,7 @@ const Home = () => {
                 Tailwind className I need to add is &apos;font-bold&apos;.)
               </li>
               <li>
-                <span className="font-bold">3. Use classes</span>Add classes to
+                <span className="font-bold">3. Use classes</span><br></br>Add classes to
                 your code and watch your website come to life!
                 <span className="italic">
                   PRO-TIP: Using VS Code as an IDE? Install Tailwind CSS
