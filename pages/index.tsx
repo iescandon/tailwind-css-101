@@ -37,7 +37,7 @@ const Home = () => {
                 correspond to specific CSS properties, such as text color,
                 padding, margin, and more. These classes can be applied directly
                 to HTML elements to quickly apply the desired styles. For
-                example, the className &apos;bg-blue-500&apos; can be used to
+                example, the class &apos;bg-blue-500&apos; can be used to
                 set the background color of an element to a specific shade of
                 blue.
               </p>
