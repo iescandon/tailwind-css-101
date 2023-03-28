@@ -145,6 +145,8 @@ const Home = () => {
               <li>
                 <span className="font-bold">3. Use classes</span><br></br>Add classes to
                 your code and watch your website come to life!
+                <br></br>
+                <br></br>
                 <span className="italic">
                   PRO-TIP: Using VS Code as an IDE? Install Tailwind CSS
                   Intellisense extension{" "}
