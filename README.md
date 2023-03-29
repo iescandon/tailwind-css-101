@@ -1,6 +1,6 @@
 # Tailwind CSS 101
 
-![Tailwind CSS 101 Screenshot](./public/images/tailwind-css-101.png)
+![Tailwind CSS 101 Screenshot](./public/images/tailwindCSS-101.png)
 
 Tailwind CSS is a utility-first CSS framework that provides a collection of pre-designed CSS classes to create user interfaces quickly. It's designed to be highly customizable, and provides a set of building blocks that can be combined to create complex layouts and designs with minimal custom CSS. All without any annoying opinionated styles you have to fight to override.
 
