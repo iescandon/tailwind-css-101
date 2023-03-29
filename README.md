@@ -66,7 +66,25 @@ Tailwind allows for other ways to use arbitrary values such as:
 - **Use arbitrary properties**: If you ever need to use a CSS property that Tailwind doesn’t include a utility for out of the box, you can also use square bracket notation to write completely arbitrary CSS `[mask-type:luminance]`.
 - **Use arbitrary variants**: Arbitrary variants let you write custom selector modifiers directly in your HTML. Arbitrary variants are just format strings that represent the selector, wrapped in square brackets. For example, this arbitrary modifier selects an element only when it is the third child `[&:nth-child(3)]:underline`.
 - **Use arbitrary groups**: You can create one-off `group-*` modifiers on the fly by providing your own selector as an arbitrary value between square brackets for styling based on parent state.
-**Use arbitrary peers**: You can create one-off `peer-*` modifiers on the fly by providing your own selector as an arbitrary value between square brackets for styling based on parent state.
+```
+<div class="group is-published">
+  <div class="hidden group-[.is-published]:block">
+    Published
+  </div>
+</div>
+```
+- **Use arbitrary peers**: You can style an element based on the state of a sibling element. Mark the sibling with the `peer` class, and use `peer-*` modifiers like `peer-invalid`, `peer-focus`, `peer-required`, and `peer-disabled` to style the target element:
+```
+<form>
+  <label class="block">
+    <span class="block text-sm font-medium text-slate-700">Email</span>
+    <input type="email" class="peer ..."/>
+    <p class="mt-2 invisible peer-invalid:visible text-pink-600 text-sm">
+      Please provide a valid email address.
+    </p>
+  </label>
+</form>
+```
 
 ## Resolving Ambiguities
 Many utilities in Tailwind share a common namespace but map to different CSS properties. For example `text-lg` and `text-black` both share the `text-` namespace, but one is for font-size and the other is for color.
