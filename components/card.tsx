@@ -33,7 +33,7 @@ const Card = () => {
               key={`img-${i}`}
             />
             <div
-              className="w-full h-full absolute inset-0 bg-black bg-opacity-40 rounded-md drop-shadow-2xl flex flex-row justify-center items-center text-center"
+              className="w-full h-full absolute inset-0 bg-black bg-opacity-40 rounded-md drop-shadow-2xl flex flex-row justify-center items-center text-center hover:animate-pulse"
               key={`div-${i}`}
             >
               <p className="text-white font-bold text-3xl" key={`p-${i}`}>
