@@ -7,24 +7,13 @@ Tailwind CSS works by providing a set of utility classes that correspond to spec
 Similar to regular CSS, there are no ready-made components provided for you. Simply, add the utility classes in your HTML, and watch how Tailwind automatically attaches the styles for you! You can think of it as shorthand for your CSS.
 
 ## Table of Contents
-1. [Helpful Links](#helpful-links)
-2. [Utility Classes](#utility-classes)
-3. [Modifiers](#modifiers)
-4. [Arbitrary Values](#arbitrary-values)
-5. [Functions and Directives](#modifiers)
-6. [Optimization](#optimization)
-7. [Customization](#customization)
-
-## Helpful Links
-Tailwind CSS 101 
-- Codepen: [Styled with Regular CSS](https://codepen.io/mexicode/pen/ZEMXJKP)
-- Codepen: [Styled with Tailwind CSS](https://codepen.io/mexicode/pen/ZEMXpYm)
-- Github: [Styled with Tailwind CSS + Optimization](https://tailwind-css-101.vercel.app/)
-
-Accordion Interactive Demo
-- Codepen: [START](https://codepen.io/mexicode/pen/LYJdoPa)
-- Codepen: [END](https://codepen.io/mexicode/pen/BaOObOW)
-
+1. [Utility Classes](#utility-classes)
+2. [Modifiers](#modifiers)
+3. [Arbitrary Values](#arbitrary-values)
+4. [Functions and Directives](#modifiers)
+5. [Optimization](#optimization)
+6. [Customization](#customization)
+7. [Links](#links)
 
 ## Utility Classes
 In Tailwind CSS, utility classes are small, single-purpose classes that can be used to apply specific styles to HTML elements. These classes are named based on the CSS property they control and the value they apply.
@@ -39,7 +28,7 @@ Utility classes in Tailwind CSS follow a consistent naming convention that makes
 - **The second part indicates the value that the class applies** (e.g. red-500 for a specific shade of red, lg for large font size, rounded for rounded corners, etc.).
 - **Additional parts may be added to modify or extend the behavior of the class** (e.g. hover, focus, active, dark, etc.).
 
-## Utility Class: Categories
+## Utility Classes: Categories
 Tailwind CSS utility classes are organized into several categories based on their functionality. These categories include:
 - **Layout**: Utility classes for controlling the layout of elements, such as flex, grid, container, float, and clear.
 - **Typography**: Utility classes for controlling the typography of elements, such as font-size, font-weight, text-align, text-color, line-height, and text-decoration.
@@ -62,3 +51,12 @@ Tailwind CSS utility classes are organized into several categories based on thei
 
 ## Customization
 
+## Links
+Tailwind CSS 101 
+- Codepen: [Styled with Regular CSS](https://codepen.io/mexicode/pen/ZEMXJKP)
+- Codepen: [Styled with Tailwind CSS](https://codepen.io/mexicode/pen/ZEMXpYm)
+- Github: [Styled with Tailwind CSS + Optimization](https://tailwind-css-101.vercel.app/)
+
+Accordion Interactive Demo
+- Codepen: [START](https://codepen.io/mexicode/pen/LYJdoPa)
+- Codepen: [END](https://codepen.io/mexicode/pen/BaOObOW)
