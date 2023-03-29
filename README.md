@@ -140,9 +140,9 @@ Overall, by creating reusable components, using the `@apply` directive, using a 
 ## Customization
 Tailwind CSS is designed to be highly customizable and provides several ways to customize the framework to suit your needs. Here are a few ways you can customize Tailwind CSS:
 
-- **Configuration file**: Tailwind CSS provides a tailwind.config.js file where you can configure various aspects of the framework, such as colors, fonts, breakpoints, and more. You can use this file to modify the default settings and add new ones as needed.
+- **Configuration file**: Tailwind CSS provides a `tailwind.config.js` file where you can configure various aspects of the framework, such as colors, fonts, breakpoints, and more. You can use this file to modify the default settings and add new ones as needed.
 - **Add custom utilities**: You can add your own custom utility classes to Tailwind CSS by using the utilities property in the `tailwind.config.js` file. This allows you to create your own utility classes that match your project's needs.
-Extend the default theme: Tailwind CSS provides a default theme that you can extend to include your own custom styles. You can use the extend property in the `tailwind.config.js` file to add new styles to the default theme.
+- **Extend the default theme**: Tailwind CSS provides a default theme that you can extend to include your own custom styles. You can use the extend property in the `tailwind.config.js` file to add new styles to the default theme.
 - **Use plugins**: Tailwind CSS provides an API for creating and using plugins that extend the framework's functionality. You can use plugins to add new utilities, components, or styles to Tailwind CSS.
 - **Override default styles**: You can override the default styles provided by Tailwind CSS by using the `@layer` directive in your CSS code. This allows you to modify the styles of specific elements or components without having to modify the entire framework.
 
