@@ -152,7 +152,7 @@ Accordion Interactive Demo
 - Codepen: [Start](https://codepen.io/mexicode/pen/LYJdoPa)
 - Codepen: [End](https://codepen.io/mexicode/pen/BaOObOW)
 
-Other Useful Links
+Additional Links
 - Tailwind CSS [Docs](https://tailwindcss.com/)
 - Tailwind CSS [Cheatsheet](https://flowbite.com/tools/tailwind-cheat-sheet/)
 - Tailwind CSS [VSCode Intellisense Extension](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
