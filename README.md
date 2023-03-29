@@ -111,6 +111,25 @@ In Tailwind CSS, there are several functions and directives that can be used to 
 
 Functions
 - **`theme()`**: This function is used to access values defined in the Tailwind CSS configuration file, such as colors, font sizes, and spacing values.
+```
+// In tailwind.config.js
+
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          100: '#f7fafc',
+          500: '#4299e1',
+          900: '#1a202c',
+        },
+      },
+    },
+  },
+  variants: {},
+  plugins: [],
+}
+```
 - **`config()`**: This function is used to access the entire Tailwind CSS configuration object.
 - **`match()`**: This function is used to conditionally apply a class based on a comparison between two values.
 
@@ -119,7 +138,29 @@ Directives
 - **`@tailwind components`**: This directive is used to define styles for individual components.
 - **`@tailwind utilities`**: This directive is used to define utility classes.
 - **`@layer`**: This directive is used to specify where styles should be inserted in the final CSS output. It accepts the values base, components, utilities, and screens.
+```
+@layer components {
+  .my-component {
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+    padding: 1rem;
+  }
+}
+```
 - **`@apply`**: This directive is used to apply Tailwind utility classes to a traditional CSS file. *Note: This directive does not work via CDN.*
+```
+// In HTML
+<div class="bg-gray-100 rounded-lg p-4">
+  <h2 class="text-2xl font-bold text-gray-800 mb-2">My Heading</h2>
+  <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <a href="#" class="btn-primary">Learn More</a>
+</div>
+
+// In CSS
+.btn-primary {
+  @apply bg-blue-500 text-white py-2 px-4 rounded;
+}
+```
 - **`@variants`**: This directive is used to create variants of existing utility classes based on certain conditions, such as hover or focus.
 - **`@screen`**: This directive is used to define custom breakpoints for responsive design.
 
