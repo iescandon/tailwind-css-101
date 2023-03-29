@@ -170,7 +170,7 @@ module.exports = {
 
 - **`config()`**: This function allows you to access and modify any part of the `tailwind.config.js` file, such as the list of available classes, the prefixes used for variants, or the paths for custom plugins.
 ```
-// use value in CSS
+// use value - CSS
 .btn-primary {
   background-color: config('theme.colors.blue.500');
 }
@@ -217,15 +217,11 @@ config('theme.fontSize.xl', '1.5rem');
 ## Directives
 Directives allow you to apply existing utility classes to specific elements or contexts, such as hover or focus states, responsive breakpoints, or even arbitrary conditions.
 
-- **`@tailwind base`**: This directive is used to define base styles for the entire document.
-- **`@tailwind components`**: This directive is used to define styles for individual components.
-- **`@tailwind utilities`**: This directive is used to define utility classes.
-- **`@layer`**: This directive is used to specify where styles should be inserted in the final CSS output. It accepts the values base, components, utilities, and screens.
+- **`@layer`**: Specify where styles should be inserted in the final CSS output. It accepts the values base, components, utilities, and screens.
 
 ```
-// CSS
 @layer components {
-  .my-component {
+  .card {
     background-color: #fff;
     border: 1px solid #e2e8f0;
     padding: 1rem;
@@ -233,7 +229,7 @@ Directives allow you to apply existing utility classes to specific elements or c
 }
 ```
 
-- **`@apply`**: This directive is used to apply Tailwind utility classes to a traditional CSS file. _Note: This directive does not work via CDN._
+- **`@apply`**: Apply Tailwind classes to a traditional CSS file. _Note: This directive does not work via CDN._
 
 ```
 <div class="bg-gray-100 rounded-lg p-4">
@@ -242,16 +238,155 @@ Directives allow you to apply existing utility classes to specific elements or c
   <a href="#" class="btn-primary">Learn More</a>
 </div>
 
-// CSS
 .btn-primary {
   @apply bg-blue-500 text-white py-2 px-4 rounded;
 }
 ```
 
-- **`@variants`**: This directive is used to create variants of existing utility classes based on certain conditions, such as hover or focus.
-- **`@screen`**: This directive is used to define custom breakpoints for responsive design.
+- **`@variants`**: Create variants of existing utility classes based on certain conditions, such as hover or focus.
+```
+.btn {
+  @variants hover, focus {
+    @apply bg-blue-700 text-white;
+  }
+}
+```
 
-By using these functions and directives, you can create custom styles and utility classes that are tailored to your specific needs.
+- **`@responsive`**: Define responsive variants for a group of utility classes
+```
+.container {
+  @responsive {
+    max-width: 100%;
+  }
+}
+```
+- **`@screen`**: Define custom breakpoints for responsive design.
+```
+@screen sm {
+  .container {
+    max-width: 640px;
+  }
+}
+```
+
+- **`@screen-reader`**: Define styles for screen reader only.
+```
+.sr-only {
+  @screen-reader {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+}
+```
+
+## @tailwind directives
+
+Tailwind organizes the styles it generates into three different “layers” — a concept popularized by ITCSS.
+
+- **The base layer** is for things like reset rules or default styles applied to plain HTML elements.
+- **The components layer** is for class-based styles that you want to be able to override with utilities.
+- **The utilities layer** is for small, single-purpose classes that should always take precedence over any other styles.
+
+The @layer directive helps you control declaration order by automatically relocating your styles to the corresponding `@tailwind` directive.
+
+- **`@tailwind base`**: Used to add base styles to your website, such as typography rules and default color palettes. These styles are applied globally and can be overridden by more specific styles elsewhere in your CSS code. 
+```
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {},
+  },
+  variants: {},
+  plugins: [],
+  corePlugins: {
+    preflight: false,
+  },
+  base: {
+    'h1': { fontSize: '48px', fontWeight: 'bold', marginBottom: '16px' },
+    'p': { fontSize: '16px', lineHeight: '1.5', marginBottom: '16px' },
+  },
+}
+```
+- **`@tailwind components`**: Used to add styles to your website's components, such as buttons, forms, and navigation menus. These styles are applied to specific HTML elements and can be customized by adding class-based styles to these elements in your HTML or CSS code. 
+```
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {},
+  },
+  variants: {},
+  plugins: [],
+  corePlugins: {
+    preflight: false,
+  },
+  components: {
+    '.btn': {
+      padding: '8px 16px',
+      borderRadius: '4px',
+      fontWeight: 'bold',
+      backgroundColor: '#4CAF50',
+      color: '#FFFFFF',
+      '&:hover': { backgroundColor: '#3E8E41' },
+    },
+  },
+}
+```
+- **`@tailwind utilities`**: Used to add custom utility classes to your website, which can be used to apply specific styles to HTML elements. This can be useful when there’s a CSS feature you’d like to use in your project that Tailwind doesn’t include utilities for out of the box.
+```
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {},
+  },
+  variants: {},
+  plugins: [],
+  corePlugins: {
+    preflight: false,
+  },
+  utilities: {
+    '.text-shadow': { textShadow: '1px 1px 1px rgba(0, 0, 0, 0.2)' },
+    '.bg-gradient': { backgroundImage: 'linear-gradient(to right, #ff416c, #ff4b2b)' },
+  },
+}
+
+```
+
+If you want to add your own custom styles in the CSS file, you can use the `@layer` directive to add those styles to the corresponding layer. Any styles you add to Tailwind with @layer will automatically support Tailwind’s modifier syntax for handling things like hover states, responsive breakpoints, dark mode, and more.
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+}
+
+@layer components {
+  .card {
+    background-color: theme('colors.white');
+    border-radius: theme('borderRadius.lg');
+    padding: theme('spacing.6');
+    box-shadow: theme('boxShadow.xl');
+  }
+
+@layer utilities {
+  .content-auto {
+    content-visibility: auto;
+  }
+}
+```
 
 ## Optimization
 
