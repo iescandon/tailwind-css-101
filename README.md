@@ -61,7 +61,10 @@ These modifiers provide additional flexibility and control when using the utilit
 ## Arbitrary Values
 If you ever need to use a CSS property that Tailwind doesn’t include a utility for out of the box, you can also use square bracket notation to write completely arbitrary CSS. 
 
-When you find yourself really needing something like top: 117px to get a background image in just the right spot, use Tailwind’s square bracket notation `top-[117px]` to generate a class on the fly with any arbitrary value.
+When you find yourself really needing something like top: 117px to get a background image in just the right spot, use Tailwind’s square bracket notation to generate a class on the fly with any arbitrary value.
+```
+top-[117px]
+```
 
 Tailwind allows for other ways to use arbitrary values such as:
 - **Use arbitrary properties**: If you ever need to use a CSS property that Tailwind doesn’t include a utility for out of the box, you can also use square bracket notation to write completely arbitrary CSS.
