@@ -93,6 +93,7 @@ When using arbitrary values, Tailwind can generally handle this ambiguity automa
 ```
 <!-- Will generate a font-size utility -->
 <div class="text-[22px]">...</div>
+
 <!-- Will generate a color utility -->
 <div class="text-[#BADA55]">...</div>
 ```
@@ -110,7 +111,7 @@ Directives:
 - **`@tailwind components`**: This directive is used to define styles for individual components.
 - **`@tailwind utilities`**: This directive is used to define utility classes.
 - **`@layer`**: This directive is used to specify where styles should be inserted in the final CSS output. It accepts the values base, components, utilities, and screens.
-- **`@apply`**: This directive is used to apply Tailwind utility classes to a traditional CSS file. Note: This directive does not work via CDN.
+- **`@apply`**: This directive is used to apply Tailwind utility classes to a traditional CSS file. *Note: This directive does not work via CDN.*
 - **`@variants`**: This directive is used to create variants of existing utility classes based on certain conditions, such as hover or focus.
 - **`@screen`**: This directive is used to define custom breakpoints for responsive design.
 
