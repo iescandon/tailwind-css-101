@@ -40,8 +40,8 @@ const Table = () => {
             {prosArr?.map((item, i) => {
               return (
                 <tr key={`tr-${i}`}>
-                  <td className="p-4" key={`pro-${i}`}>{item}</td>
-                  <td className="p-4" key={`con-${i}`}>{consArr[i]}</td>
+                  <td className="p-3" key={`pro-${i}`}>{item}</td>
+                  <td className="p-3" key={`con-${i}`}>{consArr[i]}</td>
                 </tr>
               );
             })}
