@@ -6,12 +6,24 @@ Tailwind CSS works by providing a set of utility classes that correspond to spec
 
 Similar to regular CSS, there are no ready-made components provided for you. Simply, add the utility classes in your HTML, and watch how Tailwind automatically attaches the styles for you! You can think of it as shorthand for your CSS.
 
-- Codepen
-    - Styled with [Regular CSS](https://codepen.io/mexicode/pen/ZEMXJKP) vs [Tailwind CSS](https://codepen.io/mexicode/pen/ZEMXpYm)
-    - Interactive demo [START](https://codepen.io/mexicode/pen/LYJdoPa) -> [END](https://codepen.io/mexicode/pen/BaOObOW)
+## Table of Contents
+1. [Helpful Links](#helpful-links)
+2. [Utility Classes](#utility-classes)
+3. [Modifiers](#modifiers)
+4. [Arbitrary Values](#arbitrary-values)
+5. [Functions and Directives](#modifiers)
+6. [Optimization](#optimization)
+7. [Customization](#customization)
 
-- Github
-    - Styled with Tailwind CSS + Optimization [Live Site](https://tailwind-css-101.vercel.app/)
+## Helpful Links
+- Tailwind CSS 101 
+    - Codepen: [Styled with Regular CSS](https://codepen.io/mexicode/pen/ZEMXJKP)
+    - Codepen: [Styled with Tailwind CSS](https://codepen.io/mexicode/pen/ZEMXpYm)
+    - Github: [Styled with Tailwind CSS + Optimization](https://tailwind-css-101.vercel.app/)
+
+- Accordion Interactive Demo
+    - Codepen: [START](https://codepen.io/mexicode/pen/LYJdoPa)
+    - Codepen: [END](https://codepen.io/mexicode/pen/BaOObOW)
 
 
 ## Utility Classes
@@ -42,10 +54,11 @@ Tailwind CSS utility classes are organized into several categories based on thei
 
 ## Modifiers
 
+## Arbitrary Values
 
+## Functions and Directives
 
+## Optimization
 
-
-
-
+## Customization
 
