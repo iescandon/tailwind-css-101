@@ -1,3 +1,4 @@
+// SINGLE USE COMPONENT EXAMPLE
 const Table = () => {
   const prosArr: string[] = [
     "✅ Not opinionated on how you should style your project",

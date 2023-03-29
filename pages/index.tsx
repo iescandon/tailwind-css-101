@@ -2,6 +2,7 @@ import Head from "next/head";
 import Card from "@/components/card";
 import Table from "@/components/table";
 import CodeSnippet from "@/components/code-snippet";
+import Tip from "@/components/tip";
 
 const Home = () => {
   return (
@@ -44,8 +45,9 @@ const Home = () => {
                 correspond to specific CSS properties, such as text color,
                 padding, margin, and more. These classes can be applied directly
                 to HTML elements to quickly apply the desired styles. For
-                example, the class &apos;bg-blue-500&apos; can be used to set
-                the background color of an element to a specific shade of blue.
+                example, the class <CodeSnippet text="bg-blue-500" /> can be
+                used to set the background color of an element to a specific
+                shade of blue.
               </p>
               <p>
                 Similar to regular CSS, there are no ready-made components
@@ -62,66 +64,81 @@ const Home = () => {
           {/* how to use tailwind */}
           <section>
             <h2>How to use Tailwind CSS?</h2>
-            <ol className="text-darkGray w-3/4 space-y-4">
-              <li>
-                <p className="font-bold">1. Install Tailwind CSS</p>
-                You can install Tailwind using the Tailwind CLI tool or by
-                importing the CDN directly in your code. For CodePen, we will be
-                using the CDN. Click on the cog button on the top right of the
-                JS pane and add{" "}
-                <CodeSnippet text="https://cdn.tailwindcss.com" /> under
-                External Scripts.{" "}
-                <span className="italic">
-                  PRO-TIP: Click on Settings - Behavior - and toggle to enable
-                  Format on Save for better readability.
-                </span>{" "}
-                If installing elsewhere, read{" "}
-                <a
-                  href="https://tailwindcss.com/docs/installation"
-                  className="underline text-blue-400"
-                >
-                  docs
-                </a>{" "}
-                for detailed instructions on how to install Tailwind CSS for
-                your specific use case/framework.
-              </li>
-              <li>
-                <p className="font-bold">2. Search Docs</p>
-                Use the quick search in the{" "}
-                <a
-                  href="https://tailwindcss.com/"
-                  className="underline text-blue-400"
-                >
-                  docs
-                </a>{" "}
-                or a{" "}
-                <a
-                  href="https://flowbite.com/tools/tailwind-cheat-sheet/"
-                  className="underline text-blue-400"
-                >
-                  Tailwind cheatsheet
-                </a>{" "}
-                to find the name of the className that corresponds with the CSS
-                you would like to add. (ex. I want to bold my text so I search
-                for &apos;bold&apos;. I click on Font Weight see that the
-                Tailwind className I need to add is &apos;font-bold&apos;.)
-              </li>
-              <li>
-                <p className="font-bold">3. Use classes</p>
-                Add classes to your code and watch your website come to life!{" "}
-                <span className="italic">
-                  PRO-TIP: Using VS Code as an IDE? Install Tailwind CSS
-                  Intellisense extension{" "}
+            <ol className="text-darkGray space-y-4">
+              <li className="flex flex-row items-center">
+                <div className="w-3/4">
+                  <p className="font-bold">1. Install Tailwind CSS</p>
+                  You can install Tailwind using the Tailwind CLI tool or by
+                  importing the CDN directly in your code. For CodePen, we will
+                  be using the CDN. Click on the cog button on the top right of
+                  the JS pane and add{" "}
+                  <CodeSnippet text="https://cdn.tailwindcss.com" /> under
+                  External Scripts. If installing elsewhere, read{" "}
                   <a
-                    href="https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss"
+                    href="https://tailwindcss.com/docs/installation"
                     className="underline text-blue-400"
                   >
-                    here
+                    docs
                   </a>{" "}
-                  to enhance your Tailwind development experience by providing
-                  advanced features such as autocomplete, syntax highlighting,
-                  and linting.
-                </span>
+                  for detailed instructions on how to install Tailwind CSS for
+                  your specific use case/framework.
+                </div>
+                <div className="w-1/4 pl-8">
+                  <Tip>
+                    If working in Codepen, click on <strong>Settings</strong> → <strong>Behavior</strong> → and enable <strong>Format on Save</strong> for better
+                    readability.
+                  </Tip>
+                </div>
+              </li>
+              <li className="flex flex-row items-center">
+                <div className="w-3/4">
+                  <p className="font-bold">2. Search Docs</p>
+                  Use the quick search in the{" "}
+                  <a
+                    href="https://tailwindcss.com/"
+                    className="underline text-blue-400"
+                  >
+                    docs
+                  </a>{" "}
+                  to find the name of the class that corresponds with the CSS
+                  you would like to add. (ex. I want to bold my text so I search
+                  for &apos;bold&apos;. I click on Font Weight and see that the
+                  Tailwind class I need to add is{" "}
+                  <CodeSnippet text="font-bold" />
+                  .)
+                </div>
+                <div className="w-1/4 pl-8">
+                  <Tip>
+                    Use{" "}
+                    <a
+                      href="https://flowbite.com/tools/tailwind-cheat-sheet/"
+                      className="underline text-blue-400"
+                    >
+                      Tailwind CSS Cheatsheets
+                    </a>{" "}
+                    for easier to read documentation.
+                  </Tip>
+                </div>
+              </li>
+              <li className="flex flex-row">
+                <div className="w-3/4">
+                  <p className="font-bold">3. Use classes</p>
+                  Add classes to your code and watch your website come to life!
+                </div>
+                <div className="w-1/4 pl-8">
+                  <Tip>
+                    Use{" "}
+                    <a
+                      href="https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss"
+                      className="underline text-blue-400"
+                    >
+                      Tailwind CSS VS Code Intellisense extension
+                    </a>{" "}
+                    to enhance your Tailwind development experience by providing
+                    advanced features such as autocomplete, syntax highlighting,
+                    and linting.
+                  </Tip>
+                </div>
               </li>
             </ol>
           </section>

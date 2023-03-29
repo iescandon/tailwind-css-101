@@ -1,3 +1,4 @@
+// SINGLE USE COMPONENT EXAMPLE
 interface CardObject {
   imageURL: string;
   caption: string;

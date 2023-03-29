@@ -10,7 +10,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        darkGray: '#263238'
+        darkGray: '#263238',
+        stickyNoteYellow: '#ffff88'
       },
       fontFamily: {
         courier: 'Courier Prime',
