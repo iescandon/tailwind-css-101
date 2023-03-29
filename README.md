@@ -101,12 +101,12 @@ When using arbitrary values, Tailwind can generally handle this ambiguity automa
 ## Functions and Directives
 In Tailwind CSS, there are several functions and directives that can be used to customize the behavior of the framework. Here is a summary of the different functions and directives:
 
-Functions:
+Functions
 - **`theme()`**: This function is used to access values defined in the Tailwind CSS configuration file, such as colors, font sizes, and spacing values.
 - **`config()`**: This function is used to access the entire Tailwind CSS configuration object.
 - **`match()`**: This function is used to conditionally apply a class based on a comparison between two values.
 
-Directives:
+Directives
 - **`@tailwind base`**: This directive is used to define base styles for the entire document.
 - **`@tailwind components`**: This directive is used to define styles for individual components.
 - **`@tailwind utilities`**: This directive is used to define utility classes.
