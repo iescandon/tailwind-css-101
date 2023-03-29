@@ -6,12 +6,9 @@ Tailwind CSS works by providing a set of utility classes that correspond to spec
 
 Similar to regular CSS, there are no ready-made components provided for you. Simply, add the utility classes in your HTML, and watch how Tailwind automatically attaches the styles for you! You can think of it as shorthand for your CSS.
 
-Codepen
-- [Styled with regular CSS](https://codepen.io/mexicode/pen/ZEMXJKP)
-- [Styled with Tailwind CSS](https://codepen.io/mexicode/pen/ZEMXpYm)
-
-Github
-- [Styled with Tailwind CSS + optimization](https://tailwind-css-101.vercel.app/)
+- [Codepen: Styled with Regular CSS](https://codepen.io/mexicode/pen/ZEMXJKP)
+- [Codepen: Styled with Tailwind CSS](https://codepen.io/mexicode/pen/ZEMXpYm)
+- [Github: Styled with Tailwind CSS + Optimization](https://tailwind-css-101.vercel.app/)
 
 
 ## Utility Classes
