@@ -16,14 +16,14 @@ Similar to regular CSS, there are no ready-made components provided for you. Sim
 7. [Customization](#customization)
 
 ## Helpful Links
-- Tailwind CSS 101 
-    - Codepen: [Styled with Regular CSS](https://codepen.io/mexicode/pen/ZEMXJKP)
-    - Codepen: [Styled with Tailwind CSS](https://codepen.io/mexicode/pen/ZEMXpYm)
-    - Github: [Styled with Tailwind CSS + Optimization](https://tailwind-css-101.vercel.app/)
+Tailwind CSS 101 
+- Codepen: [Styled with Regular CSS](https://codepen.io/mexicode/pen/ZEMXJKP)
+- Codepen: [Styled with Tailwind CSS](https://codepen.io/mexicode/pen/ZEMXpYm)
+- Github: [Styled with Tailwind CSS + Optimization](https://tailwind-css-101.vercel.app/)
 
-- Accordion Interactive Demo
-    - Codepen: [START](https://codepen.io/mexicode/pen/LYJdoPa)
-    - Codepen: [END](https://codepen.io/mexicode/pen/BaOObOW)
+Accordion Interactive Demo
+- Codepen: [START](https://codepen.io/mexicode/pen/LYJdoPa)
+- Codepen: [END](https://codepen.io/mexicode/pen/BaOObOW)
 
 
 ## Utility Classes
