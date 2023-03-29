@@ -64,8 +64,14 @@ If you ever need to use a CSS property that Tailwind doesn’t include a utility
 When you find yourself really needing something like top: 117px to get a background image in just the right spot, use Tailwind’s square bracket notation `top-[117px]` to generate a class on the fly with any arbitrary value.
 
 Tailwind allows for other ways to use arbitrary values such as:
-- **Use arbitrary properties**: If you ever need to use a CSS property that Tailwind doesn’t include a utility for out of the box, you can also use square bracket notation to write completely arbitrary CSS `[mask-type:luminance]`.
-- **Use arbitrary variants**: Arbitrary variants let you write custom selector modifiers directly in your HTML. Arbitrary variants are just format strings that represent the selector, wrapped in square brackets. For example, this arbitrary modifier selects an element only when it is the third child `[&:nth-child(3)]:underline`.
+- **Use arbitrary properties**: If you ever need to use a CSS property that Tailwind doesn’t include a utility for out of the box, you can also use square bracket notation to write completely arbitrary CSS.
+```
+[mask-type:luminance]
+```
+- **Use arbitrary variants**: Arbitrary variants let you write custom selector modifiers directly in your HTML. Arbitrary variants are just format strings that represent the selector, wrapped in square brackets. For example, this arbitrary modifier selects an element only when it is the third child.
+```
+[&:nth-child(3)]:underline
+```
 - **Use arbitrary groups**: You can create one-off `group-*` modifiers on the fly by providing your own selector as an arbitrary value between square brackets for styling based on parent state.
 ```
 <div class="group is-published">
