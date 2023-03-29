@@ -39,9 +39,9 @@ const Table = () => {
           <>
             {prosArr?.map((item, i) => {
               return (
-                <tr>
-                  <td className="p-4">{item}</td>
-                  <td className="p-4">{consArr[i]}</td>
+                <tr key={`tr-${i}`}>
+                  <td className="p-4" key={`pro-${i}`}>{item}</td>
+                  <td className="p-4" key={`con-${i}`}>{consArr[i]}</td>
                 </tr>
               );
             })}
