@@ -39,7 +39,7 @@ Utility classes in Tailwind CSS follow a consistent naming convention that makes
 - **The second part indicates the value that the class applies** (e.g. red-500 for a specific shade of red, lg for large font size, rounded for rounded corners, etc.).
 - **Additional parts may be added to modify or extend the behavior of the class** (e.g. hover, focus, active, dark, etc.).
 
-### Categories
+## Utility Class: Categories
 Tailwind CSS utility classes are organized into several categories based on their functionality. These categories include:
 - **Layout**: Utility classes for controlling the layout of elements, such as flex, grid, container, float, and clear.
 - **Typography**: Utility classes for controlling the typography of elements, such as font-size, font-weight, text-align, text-color, line-height, and text-decoration.
