@@ -294,7 +294,7 @@ Tailwind organizes the styles it generates into three different “layers” —
 - **The components layer** is for class-based styles that you want to be able to override with utilities.
 - **The utilities layer** is for small, single-purpose classes that should always take precedence over any other styles.
 
-The @layer directive helps you control declaration order by automatically relocating your styles to the corresponding `@tailwind` directive.
+The `@layer` directive helps you control declaration order by automatically relocating your styles to the corresponding `@tailwind` directive.
 
 - **`@tailwind base`**: Used to add base styles to your website, such as typography rules and default color palettes. These styles are applied globally and can be overridden by more specific styles elsewhere in your CSS code. 
 ```
