@@ -13,10 +13,11 @@ Similar to regular CSS, there are no ready-made components provided for you. Sim
 1. [Utility Classes](#utility-classes)
 2. [Modifiers](#modifiers)
 3. [Arbitrary Values](#arbitrary-values)
-4. [Functions and Directives](#modifiers)
-5. [Optimization](#optimization)
-6. [Customization](#customization)
-7. [Links](#links)
+4. [Functions](#functions)
+5. [Directives](#directives)
+6. [Optimization](#optimization)
+7. [Customization](#customization)
+8. [Links](#links)
 
 ## Utility Classes
 
@@ -122,14 +123,11 @@ When using arbitrary values, Tailwind can generally handle this ambiguity automa
 <div class="text-[#BADA55]">...</div>
 ```
 
-## Functions and Directives
+## Functions
 
 In Tailwind CSS, there are several functions and directives that can be used to customize the behavior of the framework. Here is a summary of the different functions and directives:
 
-Functions
-
 - **`theme()`**: This function is used to access values defined in the `tailwind.config.js`, such as colors, font sizes, and spacing values. You can also use the theme() function to define new values or override existing ones.
-
 ```
 // tailwind.config.js
 module.exports = {
@@ -171,7 +169,6 @@ module.exports = {
 ```
 
 - **`config()`**: This function is used to access the configuration values defined in the `tailwind.config.js` file. It can also be used to dynamically generate values for various properties such as background color, text color, font weight, font size, and text content.
-
 ```
 // use value in CSS
 .btn-primary {
@@ -206,7 +203,8 @@ config('theme.fontSize.xl', '1.5rem');
 }
 ```
 
-Directives
+## Directives
+Directives allow you to apply existing utility classes to specific elements or contexts, such as hover or focus states, responsive breakpoints, or even arbitrary conditions.
 
 - **`@tailwind base`**: This directive is used to define base styles for the entire document.
 - **`@tailwind components`**: This directive is used to define styles for individual components.
