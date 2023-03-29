@@ -1,13 +1,17 @@
 # Tailwind CSS 101
+
 Tailwind CSS is a utility-first CSS framework that provides a collection of pre-designed CSS classes to create user interfaces quickly. It's designed to be highly customizable, and provides a set of building blocks that can be combined to create complex layouts and designs with minimal custom CSS. All without any annoying opinionated styles you have to fight to override.
 
 Tailwind CSS works by providing a set of utility classes that correspond to specific CSS properties, such as text color, padding, margin, and more. These classes can be applied directly to HTML elements to quickly apply the desired styles. For example, the class "bg-blue-500" can be used to set the background color of an element to a specific shade of blue.
 
 Similar to regular CSS, there are no ready-made components provided for you. Simply, add the utility classes in your HTML, and watch how Tailwind automatically attaches the styles for you! You can think of it as shorthand for your CSS.
 
-- [Codepen - Styled with regular CSS](https://codepen.io/mexicode/pen/ZEMXJKP)
-- [Codepen - Styled with Tailwind CSS](https://codepen.io/mexicode/pen/ZEMXpYm)
-- [Github - Styled with Tailwind CSS + optimization](https://tailwind-css-101.vercel.app/)
+Codepen
+- [Styled with regular CSS](https://codepen.io/mexicode/pen/ZEMXJKP)
+- [Styled with Tailwind CSS](https://codepen.io/mexicode/pen/ZEMXpYm)
+
+Github
+- [Styled with Tailwind CSS + optimization](https://tailwind-css-101.vercel.app/)
 
 
 ## Utility Classes
@@ -34,6 +38,7 @@ Tailwind CSS utility classes are organized into several categories based on thei
 - **Sizing**: Utility classes for controlling the sizing of elements, such as width, height, max-width, max-height, min-width, and min-height.
 - **Effects**: Utility classes for adding effects to elements, such as shadow, opacity, transform, transition, and animation.
 - **Interactivity**: Utility classes for controlling the interactivity of elements, such as hover, focus, active, disabled, and cursor.
+
 
 ## Modifiers
 
