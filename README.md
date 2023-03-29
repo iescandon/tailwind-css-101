@@ -1,38 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tailwind CSS 101
+Tailwind CSS is a utility-first CSS framework that provides a collection of pre-designed CSS classes to create user interfaces quickly. It's designed to be highly customizable, and provides a set of building blocks that can be combined to create complex layouts and designs with minimal custom CSS. All without any annoying opinionated styles you have to fight to override.
 
-## Getting Started
+Tailwind CSS works by providing a set of utility classes that correspond to specific CSS properties, such as text color, padding, margin, and more. These classes can be applied directly to HTML elements to quickly apply the desired styles. For example, the class "bg-blue-500" can be used to set the background color of an element to a specific shade of blue.
 
-First, run the development server:
+Similar to regular CSS, there are no ready-made components provided for you. Simply, add the utility classes in your HTML, and watch how Tailwind automatically attaches the styles for you! You can think of it as shorthand for your CSS.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+- [Codepen - Styled with regular CSS](https://codepen.io/mexicode/pen/ZEMXJKP)
+- [Codepen - Styled with Tailwind CSS](https://codepen.io/mexicode/pen/ZEMXpYm)
+- [Github - Styled with Tailwind CSS + optimization](https://tailwind-css-101.vercel.app/)
+
+
+## Utility Classes
+In Tailwind CSS, utility classes are small, single-purpose classes that can be used to apply specific styles to HTML elements. These classes are named based on the CSS property they control and the value they apply.
+
+For example, the `bg-red-500` class can be used to set the background color of an element to red. Similarly, the `text-lg` class can be used to set the font size of text to large. Utility classes can also be combined to create more complex styles without the need for custom CSS. For example, you could combine the `bg-red-500`, `text-white`, and `px-4` classes to create a red button with white text and some padding:
+```
+<button class="bg-red-500 text-white px-4">Click me!</button>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Utility classes in Tailwind CSS follow a consistent naming convention that makes it easy to understand what each class does. The naming convention consists of several parts:
+- **The first part indicates the CSS property that the class controls** (e.g. bg for background color, text for text color, border for border styles, etc.).
+- **The second part indicates the value that the class applies** (e.g. red-500 for a specific shade of red, lg for large font size, rounded for rounded corners, etc.).
+- **Additional parts may be added to modify or extend the behavior of the class** (e.g. hover, focus, active, dark, etc.).
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Categories
+Tailwind CSS utility classes are organized into several categories based on their functionality. These categories include:
+- **Layout**: Utility classes for controlling the layout of elements, such as flex, grid, container, float, and clear.
+- **Typography**: Utility classes for controlling the typography of elements, such as font-size, font-weight, text-align, text-color, line-height, and text-decoration.
+- **Colors**: Utility classes for controlling the colors of elements, such as bg-color, text-color, border-color, hover-color, and focus-color.
+- **Backgrounds**: Utility classes for controlling the backgrounds of elements, such as bg-color, bg-image, bg-size, and bg-position.
+- **Borders**: Utility classes for controlling the borders of elements, such as border, border-radius, border-color, and border-width.
+- **Spacing**: Utility classes for controlling the spacing of elements, such as padding, margin, space-between, space-around, and space-evenly.
+- **Sizing**: Utility classes for controlling the sizing of elements, such as width, height, max-width, max-height, min-width, and min-height.
+- **Effects**: Utility classes for adding effects to elements, such as shadow, opacity, transform, transition, and animation.
+- **Interactivity**: Utility classes for controlling the interactivity of elements, such as hover, focus, active, disabled, and cursor.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Modifiers
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
