@@ -26,9 +26,9 @@ For example, the `bg-red-500` class can be used to set the background color of a
 ```
 
 Utility classes in Tailwind CSS follow a consistent naming convention that makes it easy to understand what each class does. The naming convention consists of several parts:
-- **The first part indicates the CSS property that the class controls** (e.g. bg for background color, text for text color, border for border styles, etc.).
-- **The second part indicates the value that the class applies** (e.g. red-500 for a specific shade of red, lg for large font size, rounded for rounded corners, etc.).
-- **Additional parts may be added to modify or extend the behavior of the class** (e.g. hover, focus, active, dark, etc.).
+- **The first part indicates the CSS property that the class controls** (e.g. `bg` for background color, `text` for text color, `border` for border styles, etc.).
+- **The second part indicates the value that the class applies** (e.g. `red-500` for a specific shade of red, `lg` for large font size, `rounded` for rounded corners, etc.).
+- **Additional parts may be added to modify or extend the behavior of the class** (e.g. `hover:`, `focus:`, `active:`, `dark:`, etc.).
 
 ## Utility Classes: Categories
 Tailwind CSS utility classes are organized into several categories based on their functionality. These categories include:
