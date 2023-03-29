@@ -22,7 +22,7 @@ In Tailwind CSS, utility classes are small, single-purpose classes that can be u
 
 For example, the `bg-red-500` class can be used to set the background color of an element to red. Similarly, the `text-lg` class can be used to set the font size of text to large. Utility classes can also be combined to create more complex styles without the need for custom CSS. For example, you could combine the `bg-red-500`, `text-white`, and `px-4` classes to create a red button with white text and some padding:
 ```
-<button class="bg-red-500 text-white px-4">Click me!</button>
+<button class="bg-red-500 text-white px-4 hover:bg-red-900">Click me!</button>
 ```
 
 Utility classes in Tailwind CSS follow a consistent naming convention that makes it easy to understand what each class does. The naming convention consists of several parts:
