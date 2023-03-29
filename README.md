@@ -125,9 +125,9 @@ When using arbitrary values, Tailwind can generally handle this ambiguity automa
 
 ## Functions
 
-In Tailwind CSS, there are several functions and directives that can be used to customize the behavior of the framework. Here is a summary of the different functions and directives:
+In Tailwind CSS, functions are used to generate utility classes based on dynamic values, such as colors, sizes, and spacing. 
 
-- **`theme()`**: This function is used to access values defined in the `tailwind.config.js`, such as colors, font sizes, and spacing values. You can also use the theme() function to define new values or override existing ones.
+- **`theme()`**: This function allows you to access and modify (override) the default values of the theme, such as colors or font sizes.
 ```
 // tailwind.config.js
 module.exports = {
@@ -168,7 +168,7 @@ module.exports = {
 }
 ```
 
-- **`config()`**: This function is used to access the configuration values defined in the `tailwind.config.js` file. It can also be used to dynamically generate values for various properties such as background color, text color, font weight, font size, and text content.
+- **`config()`**: This function allows you to access and modify any part of the `tailwind.config.js` file, such as the list of available classes, the prefixes used for variants, or the paths for custom plugins.
 ```
 // use value in CSS
 .btn-primary {
@@ -190,7 +190,8 @@ config('theme.fontSize.xl', '1.5rem');
 
 - **`match()`**: This function is used to conditionally apply a class based on a comparison between two values.
 ```
-// CSS
+// Matching a parent class:
+// if we add the class .btn-primary to an element, it will have a blue background color, and if we add the class .btn-secondary, it will have a gray background color.
 .btn {
   @match {
     primary {
@@ -198,6 +199,16 @@ config('theme.fontSize.xl', '1.5rem');
     }
     secondary {
       background-color: gray;
+    }
+  }
+}
+
+// Matching a media query
+// define styles for the .btn class only when the screen width is at least md according to your theme.screens configuration in your tailwind.config.js file.
+.btn {
+  @match {
+    md {
+      font-size: 1.5rem;
     }
   }
 }
