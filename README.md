@@ -116,10 +116,10 @@ Many utilities in Tailwind share a common namespace but map to different CSS pro
 When using arbitrary values, Tailwind can generally handle this ambiguity automatically based on the value you pass in:
 
 ```
-<!-- Will generate a font-size utility -->
+// Will generate a font-size utility
 <div class="text-[22px]">...</div>
 
-<!-- Will generate a color utility -->
+// Will generate a color utility
 <div class="text-[#BADA55]">...</div>
 ```
 
