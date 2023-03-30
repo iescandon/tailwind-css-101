@@ -36,6 +36,8 @@ Utility classes in Tailwind CSS follow a consistent naming convention that makes
 - **The second part indicates the value that the class applies** (e.g. `red-500` for a specific shade of red, `lg` for large font size, `rounded` for rounded corners, etc.).
 - **Additional parts may be added to modify or extend the behavior of the class** (e.g. `hover:`, `focus:`, `active:`, `dark:`, etc.).
 
+[Back to Table of Contents](#table-of-contents)
+
 ## Utility Classes: Categories
 
 Tailwind CSS utility classes are organized into several categories based on their functionality. These categories include:
@@ -50,6 +52,8 @@ Tailwind CSS utility classes are organized into several categories based on thei
 - **Effects**: Utility classes for adding effects to elements, such as shadow, opacity, transform, transition, and animation.
 - **Interactivity**: Utility classes for controlling the interactivity of elements, such as hover, focus, active, disabled, and cursor.
 
+[Back to Table of Contents](#table-of-contents)
+
 ## Modifiers
 
 In Tailwind CSS, modifiers are used to adjust the behavior or appearance of utility classes. Modifiers can be applied using a colon (:) followed by the modifier name. The categories of modifiers in Tailwind CSS include:
@@ -63,6 +67,8 @@ In Tailwind CSS, modifiers are used to adjust the behavior or appearance of util
 - **!important**: Modifier is used to override any previously defined styles, even if they have a higher specificity. You can make any utility important by adding a `!` character to the beginning. The `!` always goes at the beginning of the utility name, after any variants, but before any prefix. For example `sm:hover:!tw-font-bold`.
 
 These modifiers provide additional flexibility and control when using the utility classes in Tailwind CSS.
+
+[Back to Table of Contents](#table-of-contents)
 
 ## Arbitrary Values
 
@@ -110,6 +116,8 @@ top-[117px]
 </form>
 ```
 
+[Back to Table of Contents](#table-of-contents)
+
 ## Resolving Ambiguities
 
 Many utilities in Tailwind share a common namespace but map to different CSS properties. For example `text-lg` and `text-black` both share the `text-` namespace, but one is for font-size and the other is for color.
@@ -123,6 +131,8 @@ When using arbitrary values, Tailwind can generally handle this ambiguity automa
 // Will generate a color utility
 <div class="text-[#BADA55]">...</div>
 ```
+
+[Back to Table of Contents](#table-of-contents)
 
 ## Configuration
 
@@ -227,6 +237,8 @@ config('theme.fontSize.xl', '1.5rem');
 </div>
 ```
 
+[Back to Table of Contents](#table-of-contents)
+
 ## Directives
 
 Directives allow you to apply existing utility classes to specific elements or contexts, such as hover or focus states, responsive breakpoints, or even arbitrary conditions.
@@ -304,6 +316,8 @@ Directives allow you to apply existing utility classes to specific elements or c
   }
 }
 ```
+
+[Back to Table of Contents](#table-of-contents)
 
 ## @tailwind directives
 
@@ -413,6 +427,8 @@ In a CSS file, adding the `@tailwind` directives injects Tailwind's base styles,
 }
 ```
 
+[Back to Table of Contents](#table-of-contents)
+
 ## Customization
 In addition to using the `tailwind.config.js` file, functions, and directives, there are several other ways to customize Tailwind CSS:
 
@@ -422,6 +438,7 @@ In addition to using the `tailwind.config.js` file, functions, and directives, t
 - **Using CSS preprocessors**: Tailwind CSS supports CSS preprocessors like Sass and Less, which allow you to write more advanced CSS and take advantage of features like variables and mixins.
 - **Manually adding custom CSS**: If you need to add custom CSS that is not supported by Tailwind CSS, you can do so by adding it to your HTML file or using a separate CSS file. However, this method should be used sparingly and only for specific cases where other customization options are not available.
 
+[Back to Table of Contents](#table-of-contents)
 
 ## Optimization
 
@@ -435,6 +452,8 @@ Optimization is important in Tailwind CSS because it helps to reduce the size of
 - **Use responsive classes selectively**: Tailwind provides a set of responsive classes that let you apply styles based on the screen size. However, it's important to use these classes selectively and only apply the styles that are needed for each breakpoint. This can help keep your CSS file size down.
 - **Purge unused styles**: By default, Tailwind includes a lot of classes that you may not need in your project. You can remove these unused classes by running the purge command during your build process. This will analyze your code and remove any unused classes from your CSS file.
 - **Use JIT mode**: Tailwind's just-in-time (JIT) mode generates styles on the fly as they are needed, which can help reduce the size of your CSS file. To use JIT mode, set mode: 'jit' in your Tailwind configuration file.
+
+[Back to Table of Contents](#table-of-contents)
 
 ## Links
 
@@ -456,5 +475,4 @@ Additional Links
 - Tailwind CSS [VSCode Intellisense Extension](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
 
-<!-- [Back to Table of Contents ⤴](#table-of-contents) -->
-[<div align="right">Back to Table of Contents ⤴</div>](#table-of-contents)
+[Back to Table of Contents](#table-of-contents)
