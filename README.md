@@ -125,11 +125,13 @@ When using arbitrary values, Tailwind can generally handle this ambiguity automa
 ```
 
 ## Configuration
+
 The `tailwind.config.js` file is a configuration file that allows you to configure and customize various aspects of your Tailwind CSS setup including defining custom colors, spacing, breakpoints, and more.
 
 By default, `the tailwind.config.js` file exports an empty configuration object. However, you can add or override any properties you want to customize, such as colors, fonts, breakpoints, and more. You can also extend the default Tailwind CSS configuration by adding your own custom values or modifying existing ones.
 
 Once you have made changes to your `tailwind.config.js` file, you need to recompile your CSS to reflect these changes. You can do this by running the build or watch command, depending on your setup.
+
 ```
 module.exports = {
   theme: {
@@ -182,6 +184,7 @@ module.exports = {
   plugins: [],
 }
 ```
+
 In this example, the configuration file defines a custom color palette with shades of blue and gray, a custom font family with two font stacks, and custom font sizes, font weights, and text colors that extend the default theme.
 
 The extend property is used to add or override theme values. For example, the fontSize property adds two custom font sizes (2xl and 3xl), while the fontWeight property adds a custom font weight (bold). The textColor property adds custom gray shades (600 and 800) to the existing gray color palette. There are also 2 custom values, appName and appDescription.
@@ -191,18 +194,21 @@ The extend property is used to add or override theme values. For example, the fo
 Many of the customizations that you make in `tailwind.config.js` can be accessed through various Tailwind functions These functions are used in your CSS code to access and apply the values and styles defined in `tailwind.config.js`.
 
 - **`theme()`**: This function allows you to access and modify the default values of the theme in the `tailwind.config.js`, such as colors or font sizes.
+
 ```
 .my-class {
   font-size: theme('fontSize.2xl');
 }
 ```
+
 <!-- - **`extend()`**: This function is used to add new styles or modify existing ones in the Tailwind CSS framework. It takes an object as its argument, with each property representing a different class or set of classes to be added or modified.
 
 - **`variants()`**: This function is used to generate responsive or state-based variants of utility classes. It takes a callback function as its argument, which returns an object with new variants for each responsive or state-based context. -->
 
 - **`config()`**: This function allows you to access and modify any part of the `tailwind.config.js` file, such as the list of available classes, the prefixes used for variants, or the paths for custom plugins.
+
 ```
-// Accesses value 
+// Accesses value
 .btn-primary {
   background-color: config('theme.colors.blue.500');
 }
@@ -219,34 +225,8 @@ config('theme.fontSize.xl', '1.5rem');
 </div>
 ```
 
-- **`match()`**: This function is used to conditionally apply a class based on a comparison between two values.
-```
-// Matching a parent class:
-// if we add the class .btn-primary to an element, it will have a blue background color, and if we add the class .btn-secondary, it will have a gray background color.
-.btn {
-  @match {
-    primary {
-      background-color: blue;
-    }
-    secondary {
-      background-color: gray;
-    }
-  }
-}
-
-// Matching a media query
-// define styles for the .btn class only when the screen width is at least md according to your theme.screens configuration in your tailwind.config.js file.
-.btn {
-  @match {
-    md {
-      font-size: 1.5rem;
-    }
-  }
-}
-```
-
-
 ## Directives
+
 Directives allow you to apply existing utility classes to specific elements or contexts, such as hover or focus states, responsive breakpoints, or even arbitrary conditions.
 
 - **`@layer`**: Specify where styles should be inserted in the final CSS output. It accepts the values base, components, utilities, and screens.
@@ -276,6 +256,7 @@ Directives allow you to apply existing utility classes to specific elements or c
 ```
 
 - **`@variants`**: Create variants of existing utility classes based on certain conditions, such as hover or focus.
+
 ```
 .btn {
   @variants hover, focus {
@@ -285,6 +266,7 @@ Directives allow you to apply existing utility classes to specific elements or c
 ```
 
 - **`@responsive`**: Define responsive variants for a group of utility classes
+
 ```
 .container {
   @responsive {
@@ -292,7 +274,9 @@ Directives allow you to apply existing utility classes to specific elements or c
   }
 }
 ```
+
 - **`@screen`**: Define custom breakpoints for responsive design.
+
 ```
 @screen sm {
   .container {
@@ -302,6 +286,7 @@ Directives allow you to apply existing utility classes to specific elements or c
 ```
 
 - **`@screen-reader`**: Define styles for screen reader only.
+
 ```
 .sr-only {
   @screen-reader {
@@ -320,7 +305,7 @@ Directives allow you to apply existing utility classes to specific elements or c
 
 ## @tailwind directives
 
-Tailwind organizes the styles it generates into three different “layers”. 
+Tailwind organizes the styles it generates into three different “layers”.
 
 - **The base layer** is for things like reset rules or default styles applied to plain HTML elements.
 - **The components layer** is for class-based styles that you want to be able to override with utilities.
@@ -328,7 +313,8 @@ Tailwind organizes the styles it generates into three different “layers”.
 
 Use the `@layer` directive to tell Tailwind which "layer" a set of custom styles belong to. `@tailwind base`, `@tailwind components`, and `@tailwind utilities` are special directives that allow you to customize these default styles.
 
-- **`@tailwind base`**: Used to add base styles to your website, such as typography rules and default color palettes. These styles are applied globally and can be overridden by more specific styles elsewhere in your CSS code. 
+- **`@tailwind base`**: Used to add base styles to your website, such as typography rules and default color palettes. These styles are applied globally and can be overridden by more specific styles elsewhere in your CSS code.
+
 ```
 // tailwind.config.js
 module.exports = {
@@ -346,7 +332,9 @@ module.exports = {
   },
 }
 ```
-- **`@tailwind components`**: Used to add styles to your website's components, such as buttons, forms, and navigation menus. These styles are applied to specific HTML elements and can be customized by adding class-based styles to these elements in your HTML or CSS code. 
+
+- **`@tailwind components`**: Used to add styles to your website's components, such as buttons, forms, and navigation menus. These styles are applied to specific HTML elements and can be customized by adding class-based styles to these elements in your HTML or CSS code.
+
 ```
 // tailwind.config.js
 module.exports = {
@@ -370,7 +358,9 @@ module.exports = {
   },
 }
 ```
+
 - **`@tailwind utilities`**: Used to add custom utility classes to your website, which can be used to apply specific styles to HTML elements. This can be useful when there’s a CSS feature you’d like to use in your project that Tailwind doesn’t include utilities for out of the box.
+
 ```
 // tailwind.config.js
 module.exports = {
@@ -390,7 +380,8 @@ module.exports = {
 
 ```
 
-In a CSS file, adding the `@tailwind` directives injects Tailwind's base styles, component, and utility classes classes and any other styles registered by plugins. Additionally, you can use the `@layer` directive to add custom styles to a specific "layer". *Note: Any styles you add to Tailwind with `@layer` will automatically support Tailwind’s modifier syntax for handling things like hover states, responsive breakpoints, dark mode, and more.*
+In a CSS file, adding the `@tailwind` directives injects Tailwind's base styles, component, and utility classes classes and any other styles registered by plugins. Additionally, you can use the `@layer` directive to add custom styles to a specific "layer". _Note: Any styles you add to Tailwind with `@layer` will automatically support Tailwind’s modifier syntax for handling things like hover states, responsive breakpoints, dark mode, and more._
+
 ```
 @tailwind base;
 @tailwind components;
