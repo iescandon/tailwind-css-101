@@ -231,30 +231,30 @@ config('theme.fontSize.xl', '1.5rem');
 
 Directives allow you to apply existing utility classes to specific elements or contexts, such as hover or focus states, responsive breakpoints, or even arbitrary conditions.
 
-- **`@layer`**: Specify where styles should be inserted in the final CSS output. It accepts the values base, components, utilities, and screens.
-
-```
-@layer components {
-  .card {
-    background-color: #fff;
-    border: 1px solid #e2e8f0;
-    padding: 1rem;
-  }
-}
-```
-
 - **`@apply`**: Apply Tailwind classes to a traditional CSS file. _Note: This directive does not work via CDN._
 
 ```
-<div class="bg-gray-100 rounded-lg p-4">
-  <h2 class="text-2xl font-bold text-gray-800 mb-2">My Heading</h2>
-  <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  <a href="#" class="btn-primary">Learn More</a>
-</div>
+// Give <a></a> a class name of your choice, ex. btn-primary
+<a href="#" class="btn-primary">Learn More</a>
 
+// Apply utility classes to btn-primary class
 .btn-primary {
   @apply bg-blue-500 text-white py-2 px-4 rounded;
 }
+```
+
+- **`@layer`**: Specify where styles should be inserted in the final CSS output. It accepts the values base, components, utilities, and screens.
+
+```
+// Create card utility class 
+@layer components {
+  .card {
+    @apply p-4 rounded-md shadow-md bg-white;
+  }
+}
+
+// Access card utility class
+<div class="card">Card content goes here</div>
 ```
 
 - **`@variants`**: Create variants of existing utility classes based on certain conditions, such as hover or focus.
