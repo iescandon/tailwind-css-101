@@ -457,4 +457,4 @@ Additional Links
 
 
 <!-- [Back to Table of Contents ⤴](#table-of-contents) -->
-<a href="https://github.com/iescandon/tailwind-css-101/blob/main/README.md#table-of-contents"><div align="right">Back to Table of Contents ⤴</div></a>
+[<div align="right">Back to Table of Contents ⤴</div>](#table-of-contents)
