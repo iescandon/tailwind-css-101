@@ -127,7 +127,6 @@ When using arbitrary values, Tailwind can generally handle this ambiguity automa
 
 In Tailwind CSS, functions are used to generate utility classes based on dynamic values, such as colors, sizes, and spacing. 
 
-- **`theme()`**: This function allows you to access and modify (override) the default values of the theme, such as colors or font sizes.
 ```
 // tailwind.config.js
 module.exports = {
@@ -161,8 +160,9 @@ module.exports = {
   variants: {},
   plugins: [],
 }
-
-// CSS
+```
+- **`theme()`**: This function allows you to access and modify the default values of the theme in the `tailwind.config.js`, such as colors or font sizes.
+```
 .my-class {
   font-size: theme('fontSize.2xl');
 }
@@ -170,18 +170,17 @@ module.exports = {
 
 - **`config()`**: This function allows you to access and modify any part of the `tailwind.config.js` file, such as the list of available classes, the prefixes used for variants, or the paths for custom plugins.
 ```
-// use value - CSS
+// Accesses value
 .btn-primary {
   background-color: config('theme.colors.blue.500');
 }
 
-// access value
 const redColor = config('theme.colors.primary.100');
 
-// set value in your tailwind.config.js file at runtime.
+// Sets value in your tailwind.config.js file at runtime
 config('theme.fontSize.xl', '1.5rem');
 
-// dynamically generate values
+// Dynamically generate values
 <div class="bg-{{config('colors.primary.500')}} text-{{config('fontWeights.bold')}} p-4">
   <h1 class="text-{{config('textSizes.2xl')}}">{{config('appName')}}</h1>
   <p class="text-{{config('textColors.gray.600')}}">{{config('appDescription')}}</p>
