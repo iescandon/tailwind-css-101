@@ -428,14 +428,13 @@ In addition to using the `tailwind.config.js` file, functions, and directives, t
 Optimization is important in Tailwind CSS because it helps to reduce the size of the final CSS file. This in turn makes the page load quicker, improves code readability and maintainability, and reduces the risk of conflicts or error in the CSS code.
 
 - **Use customization**: Tailwind CSS allows for a lot of customization through the `tailwind.config.js` file. It's important to use this customization instead of directly adding styles to the project's CSS files to ensure that the custom styles are consistent with the rest of the project.
-- **Use `@apply` directive**: The @apply directive lets you group multiple classes together and apply them to a single element. This can help reduce the amount of CSS you need to write and make your code more maintainable.
-- **Use the `@layer` directive**: The @layer directive in Tailwind CSS allows you to organize your CSS code into layers, which can improve the readability and maintainability of your code.
+- **Use `@apply` directive**: This directive lets you group multiple classes together and apply them to a single element. This can help reduce the amount of CSS you need to write and make your code more maintainable.
+- **Use the `@layer` directive**: This directive allows you to organize your CSS code into layers, which can improve the readability and maintainability of your code.
 - **Create reusable components**: Instead of repeating the same combination of utility classes in multiple places, you can create reusable components that contain the necessary styles. For example, if you have a button that appears in multiple places, you can create a Button component that contains the necessary utility classes. This way, you can avoid duplicating code and ensure that your styles are consistent across your project.
-- **Use shorthand classes**: Tailwind provides several shorthand classes that let you apply multiple styles to a single element. For example, instead of writing px-4 py-2 bg-white text-black font-bold, you can write p-2 bg-white text-black font-bold.
+- **Use shorthand classes**: Tailwind provides several shorthand classes that let you apply multiple styles to a single element. For example, instead of writing `px-4 py-2 bg-white text-black font-bold`, you can write `p-2 bg-white text-black font-bold`.
 - **Use responsive classes selectively**: Tailwind provides a set of responsive classes that let you apply styles based on the screen size. However, it's important to use these classes selectively and only apply the styles that are needed for each breakpoint. This can help keep your CSS file size down.
 - **Purge unused styles**: By default, Tailwind includes a lot of classes that you may not need in your project. You can remove these unused classes by running the purge command during your build process. This will analyze your code and remove any unused classes from your CSS file.
 - **Use JIT mode**: Tailwind's just-in-time (JIT) mode generates styles on the fly as they are needed, which can help reduce the size of your CSS file. To use JIT mode, set mode: 'jit' in your Tailwind configuration file.
-Overall, by creating reusable components, using the `@apply` directive, using a CSS preprocessor, and using a design system, you can avoid repeating common utility combinations to recreate the same design in many different places in Tailwind CSS.
 
 ## Links
 
