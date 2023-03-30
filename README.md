@@ -13,7 +13,7 @@ Similar to regular CSS, there are no ready-made components provided for you. Sim
 1. [Utility Classes](#utility-classes)
 2. [Modifiers](#modifiers)
 3. [Arbitrary Values](#arbitrary-values)
-4. [`tailwind.config.js`](#tailwind.config.js)
+4. [Configuration](#configuration)
 5. [Functions](#functions)
 6. [Directives](#directives)
 7. [Optimization](#optimization)
@@ -124,7 +124,7 @@ When using arbitrary values, Tailwind can generally handle this ambiguity automa
 <div class="text-[#BADA55]">...</div>
 ```
 
-## `tailwind.config.js`
+## Configuration
 ```
 // tailwind.config.js
 module.exports = {
