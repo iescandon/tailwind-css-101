@@ -199,6 +199,8 @@ In this example, the configuration file defines a custom color palette with shad
 
 The extend property is used to add or override theme values. For example, the `fontSize` property adds two custom font sizes (2xl and 3xl), while the `fontWeight` property adds a custom font weight (bold). The `textColor` property adds custom gray shades (600 and 800) to the existing gray color palette and there are 2 custom values (appName and appDescription).
 
+[Back to Table of Contents](#table-of-contents)
+
 ## Functions
 
 Many of the customizations that you make in `tailwind.config.js` can be accessed through various Tailwind functions. These functions are used in your CSS code to access and apply the values and styles defined in `tailwind.config.js`.
