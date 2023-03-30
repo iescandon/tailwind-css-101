@@ -288,13 +288,13 @@ Directives allow you to apply existing utility classes to specific elements or c
 
 ## @tailwind directives
 
-Tailwind organizes the styles it generates into three different “layers” — a concept popularized by ITCSS.
+Tailwind organizes the styles it generates into three different “layers”. 
 
 - **The base layer** is for things like reset rules or default styles applied to plain HTML elements.
 - **The components layer** is for class-based styles that you want to be able to override with utilities.
 - **The utilities layer** is for small, single-purpose classes that should always take precedence over any other styles.
 
-The `@layer` directive helps you control declaration order by automatically relocating your styles to the corresponding `@tailwind` directive. In Tailwind CSS, `@tailwind base`, `@tailwind components`, and `@tailwind utilities` are special directives that allow you to customize the default styles of your website.
+Use the `@layer` directive to tell Tailwind which "layer" a set of custom styles belong to. `@tailwind base`, `@tailwind components`, and `@tailwind utilities` are special directives that allow you to customize these default styles.
 
 - **`@tailwind base`**: Used to add base styles to your website, such as typography rules and default color palettes. These styles are applied globally and can be overridden by more specific styles elsewhere in your CSS code. 
 ```
@@ -358,7 +358,7 @@ module.exports = {
 
 ```
 
-If you want to add your own custom styles in the CSS file, you can use the `@layer` directive to add those styles to the corresponding layer. Any styles you add to Tailwind with @layer will automatically support Tailwind’s modifier syntax for handling things like hover states, responsive breakpoints, dark mode, and more.
+In a CSS file, adding the `@tailwind` directives injects Tailwind's base styles, component, and utility classes classes and any other styles registered by plugins. Additionally, you can use the `@layer` directive to add custom styles to a specific "layer". *Note: Any styles you add to Tailwind with `@layer` will automatically support Tailwind’s modifier syntax for handling things like hover states, responsive breakpoints, dark mode, and more.*
 ```
 @tailwind base;
 @tailwind components;
