@@ -455,5 +455,6 @@ Additional Links
 - Tailwind CSS [Cheatsheet](https://flowbite.com/tools/tailwind-cheat-sheet/)
 - Tailwind CSS [VSCode Intellisense Extension](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
+
 <!-- [Back to Table of Contents ⤴](#table-of-contents) -->
-<div style="text-align: right">Back to Table of Contents ⤴</div>
+<div align="right">Back to Table of Contents ⤴</div>
