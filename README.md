@@ -225,13 +225,14 @@ Many of the customizations that you make in `tailwind.config.js` can be accessed
   background-color: config('theme.colors.blue.500');
 }
 ```
-```JSX
+```Javascript
 // Accesses value
 const redColor = config('theme.colors.primary.100');
 
 // Sets value in your tailwind.config.js file at runtime
 config('theme.fontSize.xl', '1.5rem');
-
+```
+```HTML
 // Dynamically generate values
 <div class="bg-{{config('colors.primary.500')}} text-{{config('fontWeights.bold')}} p-4">
   <h1 class="text-{{config('textSizes.2xl')}}">{{config('appName')}}</h1>
