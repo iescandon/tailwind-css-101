@@ -187,7 +187,7 @@ module.exports = {
 
 In this example, the configuration file defines a custom color palette with shades of blue and gray, a custom font family with two font stacks, and custom font sizes, font weights, and text colors that extend the default theme.
 
-The extend property is used to add or override theme values. For example, the fontSize property adds two custom font sizes (2xl and 3xl), while the fontWeight property adds a custom font weight (bold). The textColor property adds custom gray shades (600 and 800) to the existing gray color palette. There are also 2 custom values, appName and appDescription.
+The extend property is used to add or override theme values. For example, the `fontSize` property adds two custom font sizes (2xl and 3xl), while the `fontWeight` property adds a custom font weight (bold). The `textColor` property adds custom gray shades (600 and 800) to the existing gray color palette and there are 2 custom values (appName and appDescription).
 
 ## Functions
 
