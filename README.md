@@ -125,8 +125,12 @@ When using arbitrary values, Tailwind can generally handle this ambiguity automa
 ```
 
 ## Configuration
+The `tailwind.config.js` file is a configuration file that allows you to configure and customize various aspects of your Tailwind CSS setup including defining custom colors, spacing, breakpoints, and more.
+
+By default, `the tailwind.config.js` file exports an empty configuration object. However, you can add or override any properties you want to customize, such as colors, fonts, breakpoints, and more. You can also extend the default Tailwind CSS configuration by adding your own custom values or modifying existing ones.
+
+Once you have made changes to your `tailwind.config.js` file, you need to recompile your CSS to reflect these changes. You can do this by running the build or watch command, depending on your setup.
 ```
-// tailwind.config.js
 module.exports = {
   theme: {
     colors: {
@@ -136,7 +140,26 @@ module.exports = {
         300: '#90cdf4',
         400: '#63b3ed',
         500: '#4299e1',
-      }
+        600: '#3182ce',
+        700: '#2b6cb0',
+        800: '#2c5282',
+        900: '#2a4365',
+      },
+    gray: {
+        100: '#f7fafc',
+        200: '#edf2f7',
+        300: '#e2e8f0',
+        400: '#cbd5e0',
+        500: '#a0aec0',
+        600: '#718096',
+        700: '#4a5568',
+        800: '#2d3748',
+        900: '#1a202c',
+      },
+    },
+    fontFamily: {
+      sans: ['Inter', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
     },
     extend: {
       fontSize: {
@@ -159,10 +182,13 @@ module.exports = {
   plugins: [],
 }
 ```
+In this example, the configuration file defines a custom color palette with shades of blue and gray, a custom font family with two font stacks, and custom font sizes, font weights, and text colors that extend the default theme.
+
+The extend property is used to add or override theme values. For example, the fontSize property adds two custom font sizes (2xl and 3xl), while the fontWeight property adds a custom font weight (bold). The textColor property adds custom gray shades (600 and 800) to the existing gray color palette. There are also 2 custom values, appName and appDescription.
 
 ## Functions
 
-In Tailwind CSS, functions are used to generate utility classes based on dynamic values, such as colors, sizes, and spacing. 
+Many of the customizations that you make in `tailwind.config.js` can be accessed through various Tailwind functions These functions are used in your CSS code to access and apply the values and styles defined in `tailwind.config.js`.
 
 - **`theme()`**: This function allows you to access and modify the default values of the theme in the `tailwind.config.js`, such as colors or font sizes.
 ```
@@ -170,10 +196,13 @@ In Tailwind CSS, functions are used to generate utility classes based on dynamic
   font-size: theme('fontSize.2xl');
 }
 ```
+<!-- - **`extend()`**: This function is used to add new styles or modify existing ones in the Tailwind CSS framework. It takes an object as its argument, with each property representing a different class or set of classes to be added or modified.
+
+- **`variants()`**: This function is used to generate responsive or state-based variants of utility classes. It takes a callback function as its argument, which returns an object with new variants for each responsive or state-based context. -->
 
 - **`config()`**: This function allows you to access and modify any part of the `tailwind.config.js` file, such as the list of available classes, the prefixes used for variants, or the paths for custom plugins.
 ```
-// Accesses value
+// Accesses value 
 .btn-primary {
   background-color: config('theme.colors.blue.500');
 }
@@ -215,6 +244,7 @@ config('theme.fontSize.xl', '1.5rem');
   }
 }
 ```
+
 
 ## Directives
 Directives allow you to apply existing utility classes to specific elements or contexts, such as hover or focus states, responsive breakpoints, or even arbitrary conditions.
