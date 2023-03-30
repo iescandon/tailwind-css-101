@@ -212,7 +212,9 @@ Many of the customizations that you make in `tailwind.config.js` can be accessed
 .btn-primary {
   background-color: config('theme.colors.blue.500');
 }
-
+```
+```
+// Accesses value
 const redColor = config('theme.colors.primary.100');
 
 // Sets value in your tailwind.config.js file at runtime
