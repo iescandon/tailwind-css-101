@@ -13,11 +13,12 @@ Similar to regular CSS, there are no ready-made components provided for you. Sim
 1. [Utility Classes](#utility-classes)
 2. [Modifiers](#modifiers)
 3. [Arbitrary Values](#arbitrary-values)
-4. [Functions](#functions)
-5. [Directives](#directives)
-6. [Optimization](#optimization)
-7. [Customization](#customization)
-8. [Links](#links)
+4. [`tailwind.config.js`](#tailwind.config.js)
+5. [Functions](#functions)
+6. [Directives](#directives)
+7. [Optimization](#optimization)
+8. [Customization](#customization)
+9. [Links](#links)
 
 ## Utility Classes
 
@@ -123,10 +124,7 @@ When using arbitrary values, Tailwind can generally handle this ambiguity automa
 <div class="text-[#BADA55]">...</div>
 ```
 
-## Functions
-
-In Tailwind CSS, functions are used to generate utility classes based on dynamic values, such as colors, sizes, and spacing. 
-
+## `tailwind.config.js`
 ```
 // tailwind.config.js
 module.exports = {
@@ -161,6 +159,11 @@ module.exports = {
   plugins: [],
 }
 ```
+
+## Functions
+
+In Tailwind CSS, functions are used to generate utility classes based on dynamic values, such as colors, sizes, and spacing. 
+
 - **`theme()`**: This function allows you to access and modify the default values of the theme in the `tailwind.config.js`, such as colors or font sizes.
 ```
 .my-class {
