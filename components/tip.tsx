@@ -7,7 +7,7 @@ interface TipProps {
 
 const Tip = ({ children }: TipProps) => {
   return (
-    <div className="bg-stickyNoteYellow p-3 drop-shadow-md">
+    <div className="bg-stickyNoteYellow p-3 drop-shadow-md max-w-[220px]">
       <span className="italic text-sm">{children}</span>
     </div>
   );

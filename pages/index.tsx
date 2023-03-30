@@ -45,7 +45,7 @@ const Home = () => {
                 correspond to specific CSS properties, such as text color,
                 padding, margin, and more. These classes can be applied directly
                 to HTML elements to quickly apply the desired styles. For
-                example, the class <CodeSnippet text="bg-blue-500" /> can be
+                example, the class <CodeSnippet text="bg-blue-500" size="sm" /> can be
                 used to set the background color of an element to a specific
                 shade of blue.
               </p>
@@ -72,7 +72,7 @@ const Home = () => {
                   importing the CDN directly in your code. For CodePen, we will
                   be using the CDN. Click on the cog button on the top right of
                   the JS pane and add{" "}
-                  <CodeSnippet text="https://cdn.tailwindcss.com" /> under
+                  <CodeSnippet text="https://cdn.tailwindcss.com" size="sm" /> under
                   External Scripts. If installing elsewhere, read{" "}
                   <a
                     href="https://tailwindcss.com/docs/installation"
@@ -83,7 +83,7 @@ const Home = () => {
                   for detailed instructions on how to install Tailwind CSS for
                   your specific use case/framework.
                 </div>
-                <div className="w-1/4 pl-8">
+                <div className="w-1/4 pl-8 flex flex-row justify-center">
                   <Tip>
                     If working in Codepen, click on <strong>Settings</strong> → <strong>Behavior</strong> → and enable <strong>Format on Save</strong> for better
                     readability.
@@ -104,17 +104,16 @@ const Home = () => {
                   you would like to add. (ex. I want to bold my text so I search
                   for &apos;bold&apos;. I click on Font Weight and see that the
                   Tailwind class I need to add is{" "}
-                  <CodeSnippet text="font-bold" />
-                  .)
+                  <CodeSnippet text="font-bold" size="sm" />)
                 </div>
-                <div className="w-1/4 pl-8">
+                <div className="w-1/4 pl-8 flex flex-row justify-center">
                   <Tip>
-                    Use{" "}
+                    Use a{" "}
                     <a
                       href="https://flowbite.com/tools/tailwind-cheat-sheet/"
                       className="underline text-blue-400"
                     >
-                      Tailwind CSS Cheatsheets
+                      Tailwind CSS Cheatsheet
                     </a>{" "}
                     for easier to read documentation.
                   </Tip>
@@ -125,7 +124,7 @@ const Home = () => {
                   <p className="font-bold">3. Use classes</p>
                   Add classes to your code and watch your website come to life!
                 </div>
-                <div className="w-1/4 pl-8">
+                <div className="w-1/4 pl-8 flex flex-row justify-center">
                   <Tip>
                     Use{" "}
                     <a
@@ -143,7 +142,7 @@ const Home = () => {
             </ol>
           </section>
           {/* tailwind docs photo */}
-          <section className="">
+          <section>
             <img
               src="https://i.imgur.com/gqOfZqx.png"
               className="rounded-lg drop-shadow-2xl w-full"
