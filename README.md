@@ -76,25 +76,25 @@ If you ever need to use a CSS property that Tailwind doesn’t include a utility
 
 - **Use arbitrary values**: When you find yourself really needing something like top: 117px to get a background image in just the right spot, use Tailwind’s square bracket notation to generate a class on the fly with any arbitrary value.
 
-```
+```HTML
 top-[117px]
 ```
 
 - **Use arbitrary properties**: If you ever need to use a CSS property that Tailwind doesn’t include a utility for out of the box, you can also use square bracket notation to write completely arbitrary CSS.
 
-```
+```HTML
 [mask-type:luminance]
 ```
 
 - **Use arbitrary variants**: Arbitrary variants let you write custom selector modifiers directly in your HTML. Arbitrary variants are just format strings that represent the selector, wrapped in square brackets. For example, this arbitrary modifier selects an element only when it is the third child.
 
-```
+```HTML
 [&:nth-child(3)]:underline
 ```
 
 - **Use arbitrary groups**: You can create one-off `group-*` modifiers on the fly by providing your own selector as an arbitrary value between square brackets for styling based on parent state.
 
-```
+```HTML
 <div class="group is-published">
   <div class="hidden group-[.is-published]:block">
     Published
@@ -104,7 +104,7 @@ top-[117px]
 
 - **Use arbitrary peers**: You can style an element based on the state of a sibling element. Mark the sibling with the `peer` class, and use `peer-*` modifiers like `peer-invalid`, `peer-focus`, `peer-required`, and `peer-disabled` to style the target element:
 
-```
+```HTML
 <form>
   <label class="block">
     <span class="block text-sm font-medium text-slate-700">Email</span>
@@ -124,7 +124,7 @@ Many utilities in Tailwind share a common namespace but map to different CSS pro
 
 When using arbitrary values, Tailwind can generally handle this ambiguity automatically based on the value you pass in:
 
-```
+```HTML
 // Will generate a font-size utility
 <div class="text-[22px]">...</div>
 
@@ -142,7 +142,7 @@ By default, `the tailwind.config.js` file exports an empty configuration object.
 
 Once you have made changes to your `tailwind.config.js` file, you need to recompile your CSS to reflect these changes. You can do this by running the build or watch command, depending on your setup.
 
-```
+```Javascript
 module.exports = {
   theme: {
     colors: {
@@ -201,13 +201,13 @@ The extend property is used to add or override theme values. For example, the `f
 
 [Back to Table of Contents](#table-of-contents)
 
-## Functions
+## Functions - Check if works
 
 Many of the customizations that you make in `tailwind.config.js` can be accessed through various Tailwind functions. These functions are used in your CSS code to access and apply the values and styles defined in `tailwind.config.js`.
 
 - **`theme()`**: This function allows you to access and modify the default values of the theme in the `tailwind.config.js`, such as colors or font sizes.
 
-```
+```CSS
 .my-class {
   font-size: theme('fontSize.2xl');
 }
@@ -219,13 +219,13 @@ Many of the customizations that you make in `tailwind.config.js` can be accessed
 
 - **`config()`**: This function allows you to access and modify any part of the `tailwind.config.js` file, such as the list of available classes, the prefixes used for variants, or the paths for custom plugins.
 
-```
+```CSS
 // Accesses value
 .btn-primary {
   background-color: config('theme.colors.blue.500');
 }
 ```
-```
+```JSX
 // Accesses value
 const redColor = config('theme.colors.primary.100');
 
@@ -247,10 +247,11 @@ Directives allow you to apply existing utility classes to specific elements or c
 
 - **`@apply`**: Apply Tailwind classes to a traditional CSS file. _Note: This directive does not work via CDN._
 
-```
+```HTML
 // Give <a></a> a class name of your choice, ex. btn-primary
 <a href="#" class="btn-primary">Learn More</a>
-
+```
+```CSS
 // Apply utility classes to btn-primary class
 .btn-primary {
   @apply bg-blue-500 text-white py-2 px-4 rounded;
@@ -259,21 +260,22 @@ Directives allow you to apply existing utility classes to specific elements or c
 
 - **`@layer`**: Specify where styles should be inserted in the final CSS output. It accepts the values base, components, utilities, and screens.
 
-```
+```CSS
 // Create card utility class 
 @layer components {
   .card {
     @apply p-4 rounded-md shadow-md bg-white;
   }
 }
-
+```
+```HTML
 // Access card utility class
 <div class="card">Card content goes here</div>
 ```
 
 - **`@variants`**: Create variants of existing utility classes based on certain conditions, such as hover or focus.
 
-```
+```CSS
 .btn {
   @variants hover, focus {
     @apply bg-blue-700 text-white;
@@ -283,7 +285,7 @@ Directives allow you to apply existing utility classes to specific elements or c
 
 - **`@responsive`**: Define responsive variants for a group of utility classes
 
-```
+```CSS
 .container {
   @responsive {
     max-width: 100%;
@@ -293,7 +295,7 @@ Directives allow you to apply existing utility classes to specific elements or c
 
 - **`@screen`**: Define custom breakpoints for responsive design.
 
-```
+```CSS
 @screen sm {
   .container {
     max-width: 640px;
@@ -303,7 +305,7 @@ Directives allow you to apply existing utility classes to specific elements or c
 
 - **`@screen-reader`**: Define styles for screen reader only.
 
-```
+```CSS
 .sr-only {
   @screen-reader {
     position: absolute;
@@ -333,7 +335,7 @@ Use the `@layer` directive to tell Tailwind which "layer" a set of custom styles
 
 - **`@tailwind base`**: Used to add base styles to your website, such as typography rules and default color palettes. These styles are applied globally and can be overridden by more specific styles elsewhere in your CSS code.
 
-```
+```Javascript
 // tailwind.config.js
 module.exports = {
   theme: {
@@ -353,7 +355,7 @@ module.exports = {
 
 - **`@tailwind components`**: Used to add styles to your website's components, such as buttons, forms, and navigation menus. These styles are applied to specific HTML elements and can be customized by adding class-based styles to these elements in your HTML or CSS code.
 
-```
+```Javascript
 // tailwind.config.js
 module.exports = {
   theme: {
@@ -379,7 +381,7 @@ module.exports = {
 
 - **`@tailwind utilities`**: Used to add custom utility classes to your website, which can be used to apply specific styles to HTML elements. This can be useful when there’s a CSS feature you’d like to use in your project that Tailwind doesn’t include utilities for out of the box.
 
-```
+```Javascript
 // tailwind.config.js
 module.exports = {
   theme: {
@@ -400,7 +402,7 @@ module.exports = {
 
 In a CSS file, adding the `@tailwind` directives injects Tailwind's base styles, component, and utility classes classes and any other styles registered by plugins. Additionally, you can use the `@layer` directive to add custom styles to a specific "layer". _Note: Any styles you add to Tailwind with `@layer` will automatically support Tailwind’s modifier syntax for handling things like hover states, responsive breakpoints, dark mode, and more._
 
-```
+```CSS
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
