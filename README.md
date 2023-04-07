@@ -70,7 +70,7 @@ These modifiers provide additional flexibility and control when using the utilit
 
 [Back to Table of Contents](#table-of-contents)
 
-## Arbitrary Values
+## Arbitrary CSS
 
 If you ever need to use a CSS property that Tailwind doesn’t include a utility for out of the box, you can also use square bracket notation to write completely arbitrary CSS.
 
