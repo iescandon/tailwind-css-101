@@ -74,25 +74,33 @@ These modifiers provide additional flexibility and control when using the utilit
 
 If you ever need to use a CSS property that Tailwind doesn’t include a utility for out of the box, you can also use square bracket notation to write completely arbitrary CSS.
 
-- **Use arbitrary values**: When you find yourself really needing something like top: 117px to get a background image in just the right spot, use Tailwind’s square bracket notation to generate a class on the fly with any arbitrary value.
+- **Arbitrary values**: When you find yourself really needing something like `top: 117px` to get a background image in just the right spot, use Tailwind’s square bracket notation to generate a class on the fly with any arbitrary value.
 
 ```HTML
-top-[117px]
+<div class="top-[117px] text-[#333333]"></div>
 ```
 
-- **Use arbitrary properties**: If you ever need to use a CSS property that Tailwind doesn’t include a utility for out of the box, you can also use square bracket notation to write completely arbitrary CSS.
+- **Arbitrary properties**: If you ever need to use a CSS property that Tailwind doesn’t have a utility class for such as `mask-type`, you can also use square bracket notation to write completely arbitrary CSS. Provide both the property () and value separated by a colon inside the square brackets.
 
 ```HTML
-[mask-type:luminance]
+<div class="[mask-type:luminance]"></div>
 ```
 
-- **Use arbitrary variants**: Arbitrary variants let you write custom selector modifiers directly in your HTML. Arbitrary variants are just format strings that represent the selector, wrapped in square brackets. For example, this arbitrary modifier selects an element only when it is the third child.
+- **Arbitrary modifiers**: Need a modifier that Tailwind CSS doesn't have out of the box? Tailwind CSS lets you create custom selectors by wrapping them in square brackets. This arbitrary modifier selects an element and applies an underline only when it is the third child.
 
-```HTML
-[&:nth-child(3)]:underline
+```JSX
+<ul>
+  {[1, 2, 3, 4, 5].map((item, i) => (
+    <li className="[&:nth-child(3)]:underline" key={i}>
+      {item}
+    </li>
+  ))}
+</ul>
 ```
 
-- **Use arbitrary groups**: You can create one-off `group-*` modifiers on the fly by providing your own selector as an arbitrary value between square brackets for styling based on parent state.
+EXPLAIN MORE
+
+- **Arbitrary groups**: You can create one-off `group-*` modifiers on the fly by providing your own selector as an arbitrary value between square brackets for styling based on parent state.
 
 ```HTML
 <div class="group is-published">
@@ -102,7 +110,9 @@ top-[117px]
 </div>
 ```
 
-- **Use arbitrary peers**: You can style an element based on the state of a sibling element. Mark the sibling with the `peer` class, and use `peer-*` modifiers like `peer-invalid`, `peer-focus`, `peer-required`, and `peer-disabled` to style the target element:
+EXPLAIN MORE
+
+- **Arbitrary peers**: You can style an element based on the state of a sibling element. Mark the sibling with the `peer` class, and use `peer-*` modifiers like `peer-invalid`, `peer-focus`, `peer-required`, and `peer-disabled` to style the target element:
 
 ```HTML
 <form>
@@ -202,7 +212,8 @@ The extend property is used to add or override theme values. For example, the `f
 [Back to Table of Contents](#table-of-contents)
 
 ## Functions
-CHECK IF THESE WORK - WIP
+
+CHECK IF THESE WORK - WIP - EXPLAIN BETTER
 Many of the customizations that you make in `tailwind.config.js` can be accessed through various Tailwind functions. These functions are used in your CSS code to access and apply the values and styles defined in `tailwind.config.js`.
 
 - **`theme()`**: This function allows you to access and modify the default values of the theme in the `tailwind.config.js`, such as colors or font sizes.
@@ -225,6 +236,7 @@ Many of the customizations that you make in `tailwind.config.js` can be accessed
   background-color: config('theme.colors.blue.500');
 }
 ```
+
 ```JSX
 // Accesses value
 const redColor = config('theme.colors.primary.100');
@@ -243,6 +255,8 @@ config('theme.fontSize.xl', '1.5rem');
 
 ## Directives
 
+EXPLAIN BETTER
+
 Directives allow you to apply existing utility classes to specific elements or contexts, such as hover or focus states, responsive breakpoints, or even arbitrary conditions.
 
 - **`@apply`**: Apply Tailwind classes to a traditional CSS file. _Note: This directive does not work via CDN._
@@ -251,6 +265,7 @@ Directives allow you to apply existing utility classes to specific elements or c
 // Give <a></a> a class name of your choice, ex. btn-primary
 <a href="#" class="btn-primary">Learn More</a>
 ```
+
 ```CSS
 // Apply utility classes to btn-primary class
 .btn-primary {
@@ -261,13 +276,14 @@ Directives allow you to apply existing utility classes to specific elements or c
 - **`@layer`**: Specify where styles should be inserted in the final CSS output. It accepts the values base, components, utilities, and screens.
 
 ```CSS
-// Create card utility class 
+// Create card utility class
 @layer components {
   .card {
     @apply p-4 rounded-md shadow-md bg-white;
   }
 }
 ```
+
 ```HTML
 // Access card utility class
 <div class="card">Card content goes here</div>
@@ -434,6 +450,7 @@ In a CSS file, adding the `@tailwind` directives injects Tailwind's base styles,
 [Back to Table of Contents](#table-of-contents)
 
 ## Customization
+
 In addition to using the `tailwind.config.js` file, functions, and directives, there are several other ways to customize Tailwind CSS:
 
 - **Using plugins**: Tailwind CSS has an extensive plugin system that allows you to add new utility classes, components, and themes to your project. You can find many plugins on the official Tailwind CSS website, or you can create your own. Tailwind CSS also provides an API for creating and using plugins that extend the framework's functionality.
@@ -477,6 +494,5 @@ Additional Links
 - Tailwind CSS [Docs](https://tailwindcss.com/)
 - Tailwind CSS [Cheatsheet](https://flowbite.com/tools/tailwind-cheat-sheet/)
 - Tailwind CSS [VSCode Intellisense Extension](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
-
 
 [Back to Table of Contents](#table-of-contents)

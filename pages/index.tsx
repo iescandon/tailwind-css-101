@@ -45,9 +45,9 @@ const Home = () => {
                 correspond to specific CSS properties, such as text color,
                 padding, margin, and more. These classes can be applied directly
                 to HTML elements to quickly apply the desired styles. For
-                example, the class <CodeSnippet text="bg-blue-500" size="sm" /> can be
-                used to set the background color of an element to a specific
-                shade of blue.
+                example, the class <CodeSnippet text="bg-blue-500" size="sm" />{" "}
+                can be used to set the background color of an element to a
+                specific shade of blue.
               </p>
               <p>
                 Similar to regular CSS, there are no ready-made components
@@ -65,15 +65,18 @@ const Home = () => {
           <section>
             <h2>How to use Tailwind CSS?</h2>
             <ol className="text-darkGray space-y-4">
-              <li className="flex flex-row items-center">
+              <li className="flex flex-row items-center [&:nth-child(3)]:underline">
                 <div className="w-3/4">
                   <p className="font-bold">1. Install Tailwind CSS</p>
                   You can install Tailwind using the Tailwind CLI tool or by
                   importing the CDN directly in your code. For CodePen, we will
                   be using the CDN. Click on the cog button on the top right of
                   the JS pane and add{" "}
-                  <CodeSnippet text="https://cdn.tailwindcss.com" size="sm" /> under
-                  External Scripts. If installing elsewhere, read{" "}
+                  <CodeSnippet
+                    text="https://cdn.tailwindcss.com"
+                    size="sm"
+                  />{" "}
+                  under External Scripts. If installing elsewhere, read{" "}
                   <a
                     href="https://tailwindcss.com/docs/installation"
                     className="underline text-blue-400"
@@ -85,8 +88,9 @@ const Home = () => {
                 </div>
                 <div className="w-1/4 pl-8 flex flex-row justify-center">
                   <Tip>
-                    If working in Codepen, click on <strong>Settings</strong> → <strong>Behavior</strong> → and enable <strong>Format on Save</strong> for better
-                    readability.
+                    If working in Codepen, click on <strong>Settings</strong> →{" "}
+                    <strong>Behavior</strong> → and enable{" "}
+                    <strong>Format on Save</strong> for better readability.
                   </Tip>
                 </div>
               </li>
