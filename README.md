@@ -213,7 +213,7 @@ The extend property is used to add or override theme values. For example, the `f
 
 ## Functions
 
-CHECK IF THESE WORK - WIP - EXPLAIN BETTER
+CHECK IF THESE WORK - WIP - EXPLAIN BETTER  
 Many of the customizations that you make in `tailwind.config.js` can be accessed through various Tailwind functions. These functions are used in your CSS code to access and apply the values and styles defined in `tailwind.config.js`.
 
 - **`theme()`**: This function allows you to access and modify the default values of the theme in the `tailwind.config.js`, such as colors or font sizes.
