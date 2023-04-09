@@ -135,7 +135,7 @@ Tailwind CSS let's you write custom selector modifiers. Simply wrap the custom m
 - **Arbitrary peers**: Use custom `peer-*` modifiers to style element based on sibling state. You can style an element based on the state of a sibling element. Mark the sibling with the `peer` class. This arbitrary modifier applies `block` class only when sibling has `show-sibling` class.
 
 ```HTML
-// 2nd p element is not shown - can see the words First child only
+// 2nd p element is not shown - can see the word First child only
 <div>
   <p class="peer">
     First child
