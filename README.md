@@ -287,7 +287,7 @@ config('theme.fontSize.xl', '1.5rem');
 
 ## Directives
 
-EXPLAIN BETTER
+CHECK IF THESE WORK - WIP - EXPLAIN BETTER
 
 Directives allow you to apply existing utility classes to specific elements or contexts, such as hover or focus states, responsive breakpoints, or even arbitrary conditions.
 
@@ -372,6 +372,8 @@ Directives allow you to apply existing utility classes to specific elements or c
 [Back to Table of Contents](#table-of-contents)
 
 ## @tailwind directives
+
+CHECK IF THESE WORK - WIP - EXPLAIN BETTER
 
 Tailwind organizes the styles it generates into three different “layers”:
 
@@ -505,6 +507,7 @@ Optimization is important in Tailwind CSS because it helps to reduce the size of
 - **Use responsive classes selectively**: Tailwind provides a set of responsive classes that let you apply styles based on the screen size. However, it's important to use these classes selectively and only apply the styles that are needed for each breakpoint. This can help keep your CSS file size down.
 - **Purge unused styles**: By default, Tailwind includes a lot of classes that you may not need in your project. You can remove these unused classes by running the purge command during your build process. This will analyze your code and remove any unused classes from your CSS file.
 - **Use JIT mode**: Tailwind's just-in-time (JIT) mode generates styles on the fly as they are needed, which can help reduce the size of your CSS file. To use JIT mode, set mode: 'jit' in your Tailwind configuration file.
+<!-- - **Use a design system**: A design system is a set of guidelines, components, and assets that define the visual language of a project. By using a design system, you can ensure that your styles are consistent across your project and avoid repeating common utility combinations. Tailwind CSS can be a great foundation for building a design system because of its utility-based approach. -->
 
 [Back to Table of Contents](#table-of-contents)
 
