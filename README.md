@@ -121,7 +121,9 @@ Tailwind CSS let's you write custom selector modifiers. Simply wrap the custom m
     Published
   </p>
 </div>
+```
 
+```HTML
 // p element is shown - can see the word Published
 <div class="group is-published">
   <p class="hidden group-[.is-published]:block">
@@ -142,7 +144,9 @@ Tailwind CSS let's you write custom selector modifiers. Simply wrap the custom m
     Second child
   </p>
 </div>
+```
 
+```HTML
 // 2nd p element is shown - can see the words First child and Second child
 <div>
   <p class="peer show-sibling">
