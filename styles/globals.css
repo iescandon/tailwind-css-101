@@ -1,8 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@config "../tailwind.config.js";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 h2 {
   @apply font-bold text-3xl mb-2;
+}
+
+.code-gray {
+  background-color: theme("colors.gray.400 / 75%");
+}
+
+.btn-primary {
+  background-color: config("theme.colors.gray.400");
 }
