@@ -112,28 +112,46 @@ Arbitrary modifiers let you write custom selector modifiers, simply wrap the cus
 </ul>
 ```
 
-- **Arbitrary groups**: Use custom `group-*` modifiers to style element based on parent state. Mark the parent with the `group` class.
+- **Arbitrary groups**: Use custom `group-*` modifiers to style element based on parent state. Mark the parent with the `group` class. This arbitrary modifier applies `block` class only when parent has `is-published` class.
 
 ```HTML
-<div class="group is-published">
-  <div class="hidden group-[.is-published]:block">
+// p element is hidden - can't see the word Published
+<div class="group">
+  <p class="hidden group-[.is-published]:block">
     Published
-  </div>
+  </p>
+</div>
+
+// p element is shown - can see the word Published
+<div class="group is-published">
+  <p class="hidden group-[.is-published]:block">
+    Published
+  </p>
 </div>
 ```
 
-- **Arbitrary peers**: Use custom `peer-*` modifiers to style element based on sibling state. You can style an element based on the state of a sibling element. Mark the sibling with the `peer` class.
+- **Arbitrary peers**: Use custom `peer-*` modifiers to style element based on sibling state. You can style an element based on the state of a sibling element. Mark the sibling with the `peer` class. This arbitrary modifier applies `block` class only when sibling has `show-sibling` class.
 
 ```HTML
-<form>
-  <label class="block">
-    <span class="block text-sm font-medium text-slate-700">Email</span>
-    <input type="email" class="peer ..."/>
-    <p class="mt-2 invisible peer-invalid:visible text-pink-600 text-sm">
-      Please provide a valid email address.
-    </p>
-  </label>
-</form>
+// 2nd p element is not shown - can see the words First child only
+<div>
+  <p class="peer">
+    First child
+  </p>
+  <p class="hidden peer-[.show-sibling]:block">
+    Second child
+  </p>
+</div>
+
+// 2nd p element is shown - can see the words First child and Second child
+<div>
+  <p class="peer show-sibling">
+    First child
+  </p>
+  <p class="hidden peer-[.show-sibling]:block">
+    Second child
+  </p>
+</div>
 ```
 
 [Back to Table of Contents](#table-of-contents)
