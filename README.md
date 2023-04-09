@@ -98,7 +98,7 @@ If you ever need to use a CSS property that Tailwind doesn’t include a utility
 
 ### Arbitrary Modifiers
 
-Arbitrary modifiers let you write custom selector modifiers, simply wrap the custom modifier in square brackets and you're done!
+Tailwind CSS let's you write custom selector modifiers. Simply wrap the custom modifier in square brackets and you're done!
 
 - **Arbitrary variants**: Use custom variant modifier to style element based on their position within the document tree or their relationship with other elements. This arbitrary modifier selects an element and applies an underline only when it is the third child.
 
