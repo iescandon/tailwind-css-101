@@ -98,7 +98,7 @@ If you ever need to use a CSS property that Tailwind doesn’t include a utility
 
 [Back to Table of Contents](#table-of-contents)
 
-## Arbitrary Modifiers
+## Arbitrary CSS: Modifiers
 
 Tailwind CSS also let's you create custom selector modifiers. Simply wrap the custom modifier in square brackets and you're done!
 
