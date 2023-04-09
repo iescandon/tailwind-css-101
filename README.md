@@ -56,7 +56,7 @@ Tailwind CSS utility classes are organized into several categories based on thei
 - **Transforms**: Utility classes for applying transforms to elements, such as rotate, scale, and translate.
 - **Interactivity**: Utility classes for adding interactivity to elements, such as cursor, caret-color, and scroll-behavior.
 - **SVG**: Utility classes for styling SVG elements, such as setting the fill or stroke color, opacity, or stroke width.
-- **Accessibility**: Ready-made utility classes for improving accessibility with screen readers.
+- **Accessibility**: Ready-made utility classes to show an element to both sighted users and screen readers or to only show to screen readers.
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -73,7 +73,6 @@ In Tailwind CSS, modifiers are used to adjust the behavior or appearance of util
   - **Group**: Modifiers for controlling the appearance of elements based on parent state, such as `group-hover:`, `group-focus:`, and `group-active:`.
   - **Peer**: Modifiers for controlling the appearance of elements based on sibling state, such as `peer-invalid:`, `peer-focus:`, `peer-required:`, and `peer-disabled:`.
 - **Responsive**: Allows utility classes to be applied at specific screen sizes, such as `sm:`, `md:`, `lg:`, and `xl:`.
-- **Accessibility**: Modifiers for adding accessibility-focused styles, such as `sr-only` for screen-reader only text and `not-sr-only` for visible text.
 - **!important**: Modifier is used to override any previously defined styles, even if they have a higher specificity. You can make any utility important by adding a `!` character to the beginning. The `!` always goes at the beginning of the utility name, after any variants, but before any prefix. For example `sm:hover:!tw-font-bold`.
 
 These modifiers provide additional flexibility and control when using the utility classes in Tailwind CSS.
