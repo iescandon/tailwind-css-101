@@ -71,7 +71,7 @@ In Tailwind CSS, modifiers are used to adjust the behavior or appearance of util
   - **Variants**: Modifiers for applying utility classes to specific elements based on their position within the document tree or their relationship with other elements, such as `first:`, `last:`, `even:`, and `odd:`.
   - **State**: Modifiers for controlling the appearance of elements in different states, such as `hover:`, `focus:`, `valid:`, and `disabled:`.
   - **Group**: Modifiers for controlling the appearance of elements based on parent state, such as `group-hover:`, `group-focus:`, and `group-active:`.
-  - **Peer**: Modifiers for controlling the appearance of elements based on sibling state, such as `peer-invalid:`, `peer-focus`, `peer-required`, and `peer-disabled`.
+  - **Peer**: Modifiers for controlling the appearance of elements based on sibling state, such as `peer-invalid:`, `peer-focus:`, `peer-required:`, and `peer-disabled:`.
 - **Responsive**: Allows utility classes to be applied at specific screen sizes, such as `sm:`, `md:`, `lg:`, and `xl:`.
 - **Accessibility**: Modifiers for adding accessibility-focused styles, such as `sr-only` for screen-reader only text and `not-sr-only` for visible text.
 - **!important**: Modifier is used to override any previously defined styles, even if they have a higher specificity. You can make any utility important by adding a `!` character to the beginning. The `!` always goes at the beginning of the utility name, after any variants, but before any prefix. For example `sm:hover:!tw-font-bold`.
