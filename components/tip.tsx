@@ -1,8 +1,8 @@
 // LAYOUT COMPONENT EXAMPLE
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
 interface TipProps {
-   children: ReactNode;
+  children: ReactNode;
 }
 
 const Tip = ({ children }: TipProps) => {

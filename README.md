@@ -40,17 +40,23 @@ Utility classes in Tailwind CSS follow a consistent naming convention that makes
 
 ## Utility Classes: Categories
 
-Tailwind CSS utility classes are organized into several categories based on their functionality. These categories include:
+Tailwind CSS utility classes are organized into several categories based on their functionality. These categories are:
 
-- **Layout**: Utility classes for controlling the layout of elements, such as flex, grid, container, float, and clear.
+- **Layout**: Utility classes for creating and managing layout and positioning of elements, such as display, float, and object-fit.
+- **Flexbox & Grid**: Utility classes to use Flexbox or CSS Grid to create and manage layouts, such as flex-direction, flex-wrap, grid-template-columns, and grid-gap.
+- **Spacing**: Utility classes for controlling the spacing of elements, such as padding, margin, and _ + _ (lobotomized owl).
+- **Sizing**: Utility classes for controlling the sizing of elements, such as width, height, max-width, max-height, min-width, and min-height.
 - **Typography**: Utility classes for controlling the typography of elements, such as font-size, font-weight, text-align, text-color, line-height, and text-decoration.
-- **Colors**: Utility classes for controlling the colors of elements, such as bg-color, text-color, border-color, hover-color, and focus-color.
 - **Backgrounds**: Utility classes for controlling the backgrounds of elements, such as bg-color, bg-image, bg-size, and bg-position.
 - **Borders**: Utility classes for controlling the borders of elements, such as border, border-radius, border-color, and border-width.
-- **Spacing**: Utility classes for controlling the spacing of elements, such as padding, margin, space-between, space-around, and space-evenly.
-- **Sizing**: Utility classes for controlling the sizing of elements, such as width, height, max-width, max-height, min-width, and min-height.
-- **Effects**: Utility classes for adding effects to elements, such as shadow, opacity, transform, transition, and animation.
-- **Interactivity**: Utility classes for controlling the interactivity of elements, such as hover, focus, active, disabled, and cursor.
+- **Effects**: Utility classes for adding effects to elements, such as box-shadow and opacity.
+- **Filters**: Utility classes for applying various filters to elements, such as blur, brightness, contrast, and grayscale.
+- **Tables**: Utility classes for styling HTML tables, such as setting the table layout, border, and cell padding.
+- **Transitions & Animations**: Utility classes for adding transitions (ex. transition-duration) and ready-made animations (ex. animate-spin).
+- **Transforms**: Utility classes for applying transforms to elements, such as rotate, scale, and translate.
+- **Interactivity**: Utility classes for adding interactivity to elements, such as cursor, caret-color, and scroll-behavior.
+- **SVG**: Utility classes for styling SVG elements, such as setting the fill or stroke color, opacity, or stroke width.
+- **Accessibility**: Ready-made utility classes for improving accessibility with screen readers.
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -58,11 +64,15 @@ Tailwind CSS utility classes are organized into several categories based on thei
 
 In Tailwind CSS, modifiers are used to adjust the behavior or appearance of utility classes. Modifiers can be applied using a colon (:) followed by the modifier name. The categories of modifiers in Tailwind CSS include:
 
+- **Pseudo-element**: Modifiers for applying styles to pseudo-elements. A pseudo-element is used to style specified parts of an element.
+  - **Content**: Modifiers for inserting content before or after specific elements, such as `before:` and `after:`.
+  - **Style**: Modifiers for applying specific styles in an element, such as `first-line:`, `placeholder:`, `selection:`, and `backdrop:`.
+- **Pseudo-class**: Modifiers for applying styles to pseudo-classes. A pseudo-class is used to define a special state of an element.
+  - **Variants**: Modifiers for applying utility classes to specific elements based on their position within the document tree or their relationship with other elements, such as `first:`, `last:`, `even:`, and `odd:`.
+  - **State**: Modifiers for controlling the appearance of elements in different states, such as `hover:`, `focus:`, `valid:`, and `disabled:`.
+  - **Group**: Modifiers for controlling the appearance of elements based on parent state, such as `group-hover:`, `group-focus:`, and `group-active:`.
+  - **Peer**: Modifiers for controlling the appearance of elements based on parent state, such as `peer-invalid:`, `peer-focus`, `peer-required`, and `peer-disabled`.
 - **Responsive**: Allows utility classes to be applied at specific screen sizes, such as `sm:`, `md:`, `lg:`, and `xl:`.
-- **State**: Modifiers for controlling the appearance of elements in different states, such as `hover:`, `focus:`, `active:`, and `disabled:`.
-- **Variants**: Modifiers for applying utility classes to specific variations of an element, such as `first:`, `last:`, `even:`, `odd:`, and `group:`.
-- **Pseudo-class**: Modifiers for applying styles to pseudo-classes, such as `first-child:`, `last-child:`, and `nth-child:`.
-- **Pseudo-element**: Modifiers for applying styles to pseudo-elements, such as `before:` and `after:`.
 - **Accessibility**: Modifiers for adding accessibility-focused styles, such as `sr-only` for screen-reader only text and `not-sr-only` for visible text.
 - **!important**: Modifier is used to override any previously defined styles, even if they have a higher specificity. You can make any utility important by adding a `!` character to the beginning. The `!` always goes at the beginning of the utility name, after any variants, but before any prefix. For example `sm:hover:!tw-font-bold`.
 
@@ -86,7 +96,11 @@ If you ever need to use a CSS property that Tailwind doesn’t include a utility
 <div class="[mask-type:luminance]"></div>
 ```
 
-- **Arbitrary modifiers**: Need a modifier that Tailwind CSS doesn't have out of the box? Tailwind CSS lets you create custom selectors by wrapping them in square brackets. This arbitrary modifier selects an element and applies an underline only when it is the third child.
+### Arbitrary Modifiers
+
+Arbitrary modifiers let you write custom selector modifiers, simply wrap the custom modifier in square brackets and you're done!
+
+- **Arbitrary variants**: Use custom variant modifier to style element based on their position within the document tree or their relationship with other elements.
 
 ```JSX
 <ul>
@@ -98,9 +112,7 @@ If you ever need to use a CSS property that Tailwind doesn’t include a utility
 </ul>
 ```
 
-EXPLAIN MORE
-
-- **Arbitrary groups**: You can create one-off `group-*` modifiers on the fly by providing your own selector as an arbitrary value between square brackets for styling based on parent state.
+- **Arbitrary groups**: Use custom `group-*` modifiers to style element based on parent state. Mark the parent with the `group` class.
 
 ```HTML
 <div class="group is-published">
@@ -110,9 +122,7 @@ EXPLAIN MORE
 </div>
 ```
 
-EXPLAIN MORE
-
-- **Arbitrary peers**: You can style an element based on the state of a sibling element. Mark the sibling with the `peer` class, and use `peer-*` modifiers like `peer-invalid`, `peer-focus`, `peer-required`, and `peer-disabled` to style the target element:
+- **Arbitrary peers**: Use custom `peer-*` modifiers to style element based on sibling state. You can style an element based on the state of a sibling element. Mark the sibling with the `peer` class.
 
 ```HTML
 <form>
