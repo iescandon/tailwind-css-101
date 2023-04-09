@@ -44,7 +44,7 @@ Tailwind CSS utility classes are organized into several categories based on thei
 
 - **Layout**: Utility classes for creating and managing layout and positioning of elements, such as display, float, and object-fit.
 - **Flexbox & Grid**: Utility classes to use Flexbox or CSS Grid to create and manage layouts, such as flex-direction, flex-wrap, grid-template-columns, and grid-gap.
-- **Spacing**: Utility classes for controlling the spacing of elements, such as padding, margin, and _ + _ (lobotomized owl).
+- **Spacing**: Utility classes for controlling the spacing of elements, such as padding, margin, and `* + *` (lobotomized owl).
 - **Sizing**: Utility classes for controlling the sizing of elements, such as width, height, max-width, max-height, min-width, and min-height.
 - **Typography**: Utility classes for controlling the typography of elements, such as font-size, font-weight, text-align, text-color, line-height, and text-decoration.
 - **Backgrounds**: Utility classes for controlling the backgrounds of elements, such as bg-color, bg-image, bg-size, and bg-position.
