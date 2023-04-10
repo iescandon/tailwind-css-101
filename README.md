@@ -65,7 +65,7 @@ Tailwind CSS utility classes are organized into several categories based on thei
 
 In Tailwind CSS, modifiers are used to adjust the behavior or appearance of utility classes. Modifiers can be applied using a colon (:) followed by the modifier name. The categories of modifiers in Tailwind CSS include:
 
-- **Pseudo-element**: Modifiers used to style a specific part of the selected element(s)..
+- **Pseudo-element**: Modifiers used to style a specific part of the selected element(s).
   - **Content**: Modifier for inserting content before or after specific elements, such as `before:` and `after:`.
   - **Style**: Modifier for applying specific styles in an element, such as `first-line:`, `placeholder:`, `selection:`, and `backdrop:`.
 - **Pseudo-class**: Modifiers used to add styles to selectors, but only when those selectors meet certain conditions.
