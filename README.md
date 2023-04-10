@@ -294,7 +294,9 @@ To manage this, Tailwind organizes the styles it generates into three different 
 - **The components layer** is for class-based styles that you want to be able to override with utilities.
 - **The utilities layer** is for small, single-purpose classes that should always take precedence over any other styles.
 
-Being explicit about this makes it easier to understand how your styles will interact with each other. Lets you control the final declaration order while still organizing your actual code in whatever way you like. Additionally, any custom styles you add to the base, components, or utilities layers will only be included in your compiled CSS if those styles are actually used in your HTML.
+Being explicit about this makes it easier to understand how your styles will interact with each other. Lets you control the final declaration order while still organizing your actual code in whatever way you like.
+
+Additionally, any custom styles you add to the base, components, or utilities layers will only be included in your compiled CSS if those styles are actually used in your HTML.
 
 [Back to Table of Contents](#table-of-contents)
 
