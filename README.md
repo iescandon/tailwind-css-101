@@ -39,7 +39,7 @@ Utility classes in Tailwind CSS follow a consistent naming convention that makes
 
 [Back to Table of Contents](#table-of-contents)
 
-### Utility Classes: Categories
+## Utility Classes: Categories
 
 Tailwind CSS utility classes are organized into several categories based on their functionality. These categories are:
 
@@ -96,7 +96,7 @@ If you ever need to use a CSS property that Tailwind doesn’t include a utility
 
 [Back to Table of Contents](#table-of-contents)
 
-### Arbitrary CSS: Modifiers
+## Arbitrary CSS: Modifiers
 
 Tailwind CSS also let's you create custom selector modifiers.
 
@@ -161,7 +161,7 @@ Tailwind CSS also let's you create custom selector modifiers.
 
 [Back to Table of Contents](#table-of-contents)
 
-### Arbitrary CSS: Resolving Ambiguities
+## Arbitrary CSS: Resolving Ambiguities
 
 Many utilities in Tailwind share a common namespace but map to different CSS properties. For example `text-lg` and `text-black` both share the `text-` namespace, but one is for font-size and the other is for color.
 
@@ -247,7 +247,7 @@ module.exports = {
 
 [Back to Table of Contents](#table-of-contents)
 
-### Configuration: Referencing in JavaScript
+## Configuration: Referencing in JavaScript
 
 It can often be useful to reference your configuration values in your own client-side JavaScript — for example to access some of your theme values when dynamically applying inline styles in a React or Vue component.
 
