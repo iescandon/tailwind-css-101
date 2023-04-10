@@ -183,7 +183,7 @@ The `tailwind.config.js` file is a configuration file that allows you to configu
 
 By default, the `tailwind.config.js` file exports an empty configuration object. However, you can add or override any properties you want to customize, such as colors, fonts, breakpoints, and more. You can also extend the default Tailwind CSS configuration by adding your own custom values or modifying existing ones.
 
-Every section of the config file is optional, so you only have to specify what you’d like to change. Any missing sections will fall back to Tailwind’s default configuration.
+Every section of the config file is optional, so you only have to specify what you’d like to change. Any missing sections will fall back to [Tailwind’s default configuration](https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/config.full.js).
 
 Once you have made changes to your `tailwind.config.js` file, you need to recompile your CSS to reflect these changes. You can do this by running the build or watch command, depending on your setup.
 
