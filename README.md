@@ -294,9 +294,7 @@ To manage this, Tailwind organizes the styles it generates into three different 
 - **The components layer** is for class-based styles that you want to be able to override with utilities.
 - **The utilities layer** is for small, single-purpose classes that should always take precedence over any other styles.
 
-Being explicit about this makes it easier to understand how your styles will interact with each other. Lets you control the final declaration order while still organizing your actual code in whatever way you like.
-
-Additionally, any custom styles you add to the base, components, or utilities layers will only be included in your compiled CSS if those styles are actually used in your HTML.
+This makes it easier to understand how your styles will interact with each other and lets you control the final declaration order while still organizing your actual code in whatever way you like. Additionally, any custom styles you add to the base, components, or utilities layers will only be included in your compiled CSS if those styles are actually used in your HTML.
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -349,7 +347,7 @@ Directives allow you to apply existing utility classes and configs to specific e
 ```
 
 ```HTML
-<!-- Use card component and utility classes -->
+<!-- Will use card component, utility, and base classes -->
 <div class="card">
   <h1>Card Title</h1>
   <h2>Card Subtitle</h2>
@@ -437,7 +435,7 @@ Optimization is important in Tailwind CSS because it helps to reduce the size of
 - **Use shorthand classes**: Tailwind provides several shorthand classes that let you apply multiple styles to a single element. For example, instead of writing `pt-4 pb-4 pr-4 pl-4`, you can write `p-4`.
 - **Use responsive classes selectively**: Tailwind provides a set of responsive classes that let you apply styles based on the screen size. However, it's important to use these classes selectively and only apply the styles that are needed for each breakpoint. This can help keep your CSS file size down.
 - **Purge unused styles**: By default, Tailwind includes a lot of classes that you may not need in your project. You can remove these unused classes by running the purge command during your build process. This will analyze your code and remove any unused classes from your CSS file.
-- **Use JIT mode**: Tailwind's just-in-time (JIT) mode generates styles on the fly as they are needed, which can help reduce the size of your CSS file. To use JIT mode, set mode: 'jit' in your Tailwind configuration file.
+- **Use JIT mode**: Tailwind's just-in-time (JIT) mode generates styles on the fly as they are needed, which can help reduce the size of your CSS file. To use JIT mode, set `mode: 'jit'` in your `tailwind.config.js` file.
 <!-- - **Use a design system**: A design system is a set of guidelines, components, and assets that define the visual language of a project. By using a design system, you can ensure that your styles are consistent across your project and avoid repeating common utility combinations. Tailwind CSS can be a great foundation for building a design system because of its utility-based approach. -->
 
 [Back to Table of Contents](#table-of-contents)
