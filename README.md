@@ -43,21 +43,21 @@ Utility classes in Tailwind CSS follow a consistent naming convention that makes
 
 Tailwind CSS utility classes are organized into several categories based on their functionality. These categories are:
 
-1. **Layout**: Manage layout and positioning with classes like display, float, and object-fit.
-2. **Flexbox & Grid**: Use Flexbox or CSS Grid for layouts with classes like flex-direction, flex-wrap, grid-template-columns, and grid-gap.
-3. **Spacing**: Control element spacing with classes like padding, margin, and `* + *` (lobotomized owl).
-4. **Sizing**: Adjust element sizing with classes like width, height, max-width, max-height, min-width, and min-height.
-5. **Typography**: Control typography with classes like font-size, font-weight, text-align, text-color, line-height, and text-decoration.
-6. **Backgrounds**: Manage element backgrounds with classes like background-color, background-image, background-size, and background-position.
-7. **Borders**: Control element borders with classes like border, border-radius, border-color, and border-width.
-8. **Effects**: Add effects like box-shadow and opacity to elements.
-9. **Filters**: Apply filters like blur, brightness, contrast, and grayscale to elements.
-10. **Tables**: Style HTML tables with table layout, border, and cell padding classes.
-11. **Transitions & Animations**: Add transitions (ex. transition-duration) and ready-made animations (ex. animate-spin) to elements.
-12. **Transforms**: Apply transforms like rotate, scale, and translate to elements.
-13. **Interactivity**: Enhance element interactivity with classes like cursor, caret-color, and scroll-behavior.
-14. **SVG**: Style SVG elements with fill or stroke color, opacity, or stroke width classes.
-15. **Accessibility**: Use ready-made utility classes to show elements to screen readers only or to both screen readers and sighted users.
+- **Layout**: Manage layout and positioning with classes like display, float, and object-fit.
+- **Flexbox & Grid**: Use Flexbox or CSS Grid for layouts with classes like flex-direction, flex-wrap, grid-template-columns, and grid-gap.
+- **Spacing**: Control element spacing with classes like padding, margin, and `* + *` (lobotomized owl).
+- **Sizing**: Adjust element sizing with classes like width, height, max-width, max-height, min-width, and min-height.
+- **Typography**: Control typography with classes like font-size, font-weight, text-align, text-color, line-height, and text-decoration.
+- **Backgrounds**: Manage element backgrounds with classes like background-color, background-image, background-size, and background-position.
+- **Borders**: Control element borders with classes like border, border-radius, border-color, and border-width.
+- **Effects**: Add effects like box-shadow and opacity to elements.
+- **Filters**: Apply filters like blur, brightness, contrast, and grayscale to elements.
+- **Tables**: Style HTML tables with table layout, border, and cell padding classes.
+- **Transitions & Animations**: Add transitions (ex. transition-duration) and ready-made animations (ex. animate-spin) to elements.
+- **Transforms**: Apply transforms like rotate, scale, and translate to elements.
+- **Interactivity**: Enhance element interactivity with classes like cursor, caret-color, and scroll-behavior.
+- **SVG**: Style SVG elements with fill or stroke color, opacity, or stroke width classes.
+- **Accessibility**: Use ready-made utility classes to show elements to screen readers only or to both screen readers and sighted users.
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -65,16 +65,16 @@ Tailwind CSS utility classes are organized into several categories based on thei
 
 Tailwind CSS modifiers adjust the behavior or appearance of utility classes. Apply modifiers using a colon (:) followed by the modifier name. The modifier categories are:
 
-1. **Pseudo-element**: Add styles to specific parts of selected elements.
-   - **Content**: Insert content with `before:` and `after:` modifiers.
-   - **Style**: Apply styles using `first-line:`, `placeholder:`, `selection:`, and `backdrop:` modifiers.
-2. **Pseudo-class**: Add styles to selectors under certain conditions.
-   - **Variants**: Apply classes based on element position or relationship with `first:`, `last:`, `even:`, and `odd:` modifiers.
-   - **State**: Control appearance in different states with `hover:`, `focus:`, `valid:`, and `disabled:` modifiers.
-   - **Group**: Control appearance based on parent state using `group-hover:`, `group-focus:`, and `group-active:` modifiers.
-   - **Peer**: Control appearance based on sibling state with `peer-invalid:`, `peer-focus:`, `peer-required:`, and `peer-disabled:` modifiers.
-3. **Responsive**: Apply classes at specific screen sizes using `sm:`, `md:`, `lg:`, and `xl:` modifiers.
-4. **!important**: Override previously defined styles by placing `!` at the beginning of the utility name, after any variants, but before any prefix (e.g. `sm:hover:!tw-font-bold`).
+- **Pseudo-element**: Add styles to specific parts of selected elements.
+  - **Content**: Insert content with `before:` and `after:` modifiers.
+  - **Style**: Apply styles using `first-line:`, `placeholder:`, `selection:`, and `backdrop:` modifiers.
+- **Pseudo-class**: Add styles to selectors under certain conditions.
+  - **Variants**: Apply classes based on element position or relationship with `first:`, `last:`, `even:`, and `odd:` modifiers.
+  - **State**: Control appearance in different states with `hover:`, `focus:`, `valid:`, and `disabled:` modifiers.
+  - **Group**: Control appearance based on parent state using `group-hover:`, `group-focus:`, and `group-active:` modifiers.
+  - **Peer**: Control appearance based on sibling state with `peer-invalid:`, `peer-focus:`, `peer-required:`, and `peer-disabled:` modifiers.
+- **Responsive**: Apply classes at specific screen sizes using `sm:`, `md:`, `lg:`, and `xl:` modifiers.
+- **!important**: Override previously defined styles by placing `!` at the beginning of the utility name, after any variants, but before any prefix (e.g. `sm:hover:!tw-font-bold`).
 
 [Back to Table of Contents](#table-of-contents)
 
