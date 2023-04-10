@@ -11,15 +11,19 @@ Similar to regular CSS, there are no ready-made components provided for you. Sim
 ## Table of Contents
 
 1. [Utility Classes](#utility-classes)
-2. [Modifiers](#modifiers)
-3. [Arbitrary CSS](#arbitrary-css)
-4. [Configuration](#configuration)
-5. [Layers](#layers)
-6. [Directives](#directives)
-7. [Functions](#functions)
-8. [Customization](#customization)
-9. [Optimization](#optimization)
-10. [Links](#links)
+2. [Utility Classes: Categories](#utility-classes-categories)
+3. [Modifiers](#modifiers)
+4. [Arbitrary CSS](#arbitrary-css)
+5. [Arbitrary CSS: Modifiers](#arbitrary-css-modifiers)
+6. [Arbitrary CSS: Resolving Ambiguities](#arbitrary-css-resolving-ambiguities)
+7. [Configuration](#configuration)
+8. [Configuration: Referencing in JavaScript](#configuration-referencing-in-javascript)
+9. [Layers](#layers)
+10. [Directives](#directives)
+11. [Functions](#functions)
+12. [Customization](#customization)
+13. [Optimization](#optimization)
+14. [Links](#links)
 
 ## Utility Classes
 
@@ -161,7 +165,7 @@ Tailwind CSS also let's you create custom selector modifiers.
 
 [Back to Table of Contents](#table-of-contents)
 
-## Resolving Ambiguities
+## Arbitrary CSS: Resolving Ambiguities
 
 Many utilities in Tailwind share a common namespace but map to different CSS properties. For example `text-lg` and `text-black` both share the `text-` namespace, but one is for font-size and the other is for color.
 
@@ -247,7 +251,7 @@ module.exports = {
 
 [Back to Table of Contents](#table-of-contents)
 
-## Referencing in JavaScript
+## Configuration: Referencing in JavaScript
 
 It can often be useful to reference your configuration values in your own client-side JavaScript — for example to access some of your theme values when dynamically applying inline styles in a React or Vue component.
 
