@@ -45,17 +45,17 @@ Tailwind CSS utility classes are organized into several categories based on thei
 
 1. **Layout**: Manage layout and positioning with classes like display, float, and object-fit.
 2. **Flexbox & Grid**: Use Flexbox or CSS Grid for layouts with classes like flex-direction, flex-wrap, grid-template-columns, and grid-gap.
-3. **Spacing**: Control element spacing with padding, margin, and `* + *` (lobotomized owl).
-4. **Sizing**: Adjust element sizing with width, height, max-width, max-height, min-width, and min-height classes.
-5. **Typography**: Control typography with font-size, font-weight, text-align, text-color, line-height, and text-decoration classes.
-6. **Backgrounds**: Manage element backgrounds using background-color, background-image, background-size, and background-position classes.
-7. **Borders**: Control element borders with border, border-radius, border-color, and border-width classes.
+3. **Spacing**: Control element spacing with classes like padding, margin, and `* + *` (lobotomized owl).
+4. **Sizing**: Adjust element sizing with classes like width, height, max-width, max-height, min-width, and min-height.
+5. **Typography**: Control typography with classes like font-size, font-weight, text-align, text-color, line-height, and text-decoration.
+6. **Backgrounds**: Manage element backgrounds with classes like background-color, background-image, background-size, and background-position.
+7. **Borders**: Control element borders with classes like border, border-radius, border-color, and border-width.
 8. **Effects**: Add effects like box-shadow and opacity to elements.
 9. **Filters**: Apply filters like blur, brightness, contrast, and grayscale to elements.
 10. **Tables**: Style HTML tables with table layout, border, and cell padding classes.
 11. **Transitions & Animations**: Add transitions (ex. transition-duration) and ready-made animations (ex. animate-spin) to elements.
 12. **Transforms**: Apply transforms like rotate, scale, and translate to elements.
-13. **Interactivity**: Enhance element interactivity with cursor, caret-color, and scroll-behavior classes.
+13. **Interactivity**: Enhance element interactivity with classes like cursor, caret-color, and scroll-behavior.
 14. **SVG**: Style SVG elements with fill or stroke color, opacity, or stroke width classes.
 15. **Accessibility**: Use ready-made utility classes to show elements to screen readers only or to both screen readers and sighted users.
 
@@ -65,7 +65,7 @@ Tailwind CSS utility classes are organized into several categories based on thei
 
 Tailwind CSS modifiers adjust the behavior or appearance of utility classes. Apply modifiers using a colon (:) followed by the modifier name. The modifier categories are:
 
-1. **Pseudo-element**: Style specific parts of selected elements.
+1. **Pseudo-element**: Add styles to specific parts of selected elements.
    - **Content**: Insert content with `before:` and `after:` modifiers.
    - **Style**: Apply styles using `first-line:`, `placeholder:`, `selection:`, and `backdrop:` modifiers.
 2. **Pseudo-class**: Add styles to selectors under certain conditions.
