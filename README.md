@@ -43,38 +43,38 @@ Utility classes in Tailwind CSS follow a consistent naming convention that makes
 
 Tailwind CSS utility classes are organized into several categories based on their functionality. These categories are:
 
-- **Layout**: Utility classes for creating and managing layout and positioning of elements, such as display, float, and object-fit.
-- **Flexbox & Grid**: Utility classes to use Flexbox or CSS Grid to create and manage layouts, such as flex-direction, flex-wrap, grid-template-columns, and grid-gap.
-- **Spacing**: Utility classes for controlling the spacing of elements, such as padding, margin, and `* + *` (lobotomized owl).
-- **Sizing**: Utility classes for controlling the sizing of elements, such as width, height, max-width, max-height, min-width, and min-height.
-- **Typography**: Utility classes for controlling the typography of elements, such as font-size, font-weight, text-align, text-color, line-height, and text-decoration.
-- **Backgrounds**: Utility classes for controlling the backgrounds of elements, such as background-color, background-image, background-size, and background-position.
-- **Borders**: Utility classes for controlling the borders of elements, such as border, border-radius, border-color, and border-width.
-- **Effects**: Utility classes for adding effects to elements, such as box-shadow and opacity.
-- **Filters**: Utility classes for applying various filters to elements, such as blur, brightness, contrast, and grayscale.
-- **Tables**: Utility classes for styling HTML tables, such as setting the table layout, border, and cell padding.
-- **Transitions & Animations**: Utility classes for adding transitions (ex. transition-duration) and ready-made animations (ex. animate-spin).
-- **Transforms**: Utility classes for applying transforms to elements, such as rotate, scale, and translate.
-- **Interactivity**: Utility classes for adding interactivity to elements, such as cursor, caret-color, and scroll-behavior.
-- **SVG**: Utility classes for styling SVG elements, such as setting the fill or stroke color, opacity, or stroke width.
-- **Accessibility**: Ready-made utility classes to show an element only to screen readers or to both screen readers and sighted users.
+1. **Layout**: Manage layout and positioning with classes like display, float, and object-fit.
+2. **Flexbox & Grid**: Use Flexbox or CSS Grid for layouts with classes like flex-direction, flex-wrap, grid-template-columns, and grid-gap.
+3. **Spacing**: Control element spacing with padding, margin, and `* + *` (lobotomized owl).
+4. **Sizing**: Adjust element sizing with width, height, max-width, max-height, min-width, and min-height classes.
+5. **Typography**: Control typography with font-size, font-weight, text-align, text-color, line-height, and text-decoration classes.
+6. **Backgrounds**: Manage element backgrounds using background-color, background-image, background-size, and background-position classes.
+7. **Borders**: Control element borders with border, border-radius, border-color, and border-width classes.
+8. **Effects**: Add effects like box-shadow and opacity to elements.
+9. **Filters**: Apply filters like blur, brightness, contrast, and grayscale to elements.
+10. **Tables**: Style HTML tables with table layout, border, and cell padding classes.
+11. **Transitions & Animations**: Add transitions (ex. transition-duration) and ready-made animations (ex. animate-spin) to elements.
+12. **Transforms**: Apply transforms like rotate, scale, and translate to elements.
+13. **Interactivity**: Enhance element interactivity with cursor, caret-color, and scroll-behavior classes.
+14. **SVG**: Style SVG elements with fill or stroke color, opacity, or stroke width classes.
+15. **Accessibility**: Use ready-made utility classes to show elements to screen readers only or to both screen readers and sighted users.
 
 [Back to Table of Contents](#table-of-contents)
 
 ## Modifiers
 
-In Tailwind CSS, modifiers are used to adjust the behavior or appearance of utility classes. Modifiers can be applied using a colon (:) followed by the modifier name. The categories of modifiers in Tailwind CSS include:
+Tailwind CSS modifiers adjust the behavior or appearance of utility classes. Apply modifiers using a colon (:) followed by the modifier name. The modifier categories are:
 
-- **Pseudo-element**: Modifiers used to style a specific part of the selected element(s).
-  - **Content**: Modifier for inserting content before or after specific elements, such as `before:` and `after:`.
-  - **Style**: Modifier for applying specific styles in an element, such as `first-line:`, `placeholder:`, `selection:`, and `backdrop:`.
-- **Pseudo-class**: Modifiers used to add styles to selectors, but only when those selectors meet certain conditions.
-  - **Variants**: Modifier for applying utility classes to specific elements based on their position within the document tree or their relationship with other elements, such as `first:`, `last:`, `even:`, and `odd:`.
-  - **State**: Modifier for controlling the appearance of elements in different states, such as `hover:`, `focus:`, `valid:`, and `disabled:`.
-  - **Group**: Modifier for controlling the appearance of elements based on parent state, such as `group-hover:`, `group-focus:`, and `group-active:`.
-  - **Peer**: Modifier for controlling the appearance of elements based on sibling state, such as `peer-invalid:`, `peer-focus:`, `peer-required:`, and `peer-disabled:`.
-- **Responsive**: Modifier used to apply utility classes at specific screen sizes, such as `sm:`, `md:`, `lg:`, and `xl:`.
-- **!important**: Modifier used to override any previously defined styles. The `!` always goes at the beginning of the utility name, after any variants, but before any prefix. For example `sm:hover:!tw-font-bold`.
+1. **Pseudo-element**: Style specific parts of selected elements.
+   - **Content**: Insert content with `before:` and `after:` modifiers.
+   - **Style**: Apply styles using `first-line:`, `placeholder:`, `selection:`, and `backdrop:` modifiers.
+2. **Pseudo-class**: Add styles to selectors under certain conditions.
+   - **Variants**: Apply classes based on element position or relationship with `first:`, `last:`, `even:`, and `odd:` modifiers.
+   - **State**: Control appearance in different states with `hover:`, `focus:`, `valid:`, and `disabled:` modifiers.
+   - **Group**: Control appearance based on parent state using `group-hover:`, `group-focus:`, and `group-active:` modifiers.
+   - **Peer**: Control appearance based on sibling state with `peer-invalid:`, `peer-focus:`, `peer-required:`, and `peer-disabled:` modifiers.
+3. **Responsive**: Apply classes at specific screen sizes using `sm:`, `md:`, `lg:`, and `xl:` modifiers.
+4. **!important**: Override previously defined styles by placing `!` at the beginning of the utility name, after any variants, but before any prefix (e.g. `sm:hover:!tw-font-bold`).
 
 [Back to Table of Contents](#table-of-contents)
 
