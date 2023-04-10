@@ -259,8 +259,8 @@ import tailwindConfig from "../tailwind.config.js";
 
 const config = resolveConfig(tailwindConfig);
 
-// prints "#ffff88"
 console.log(config?.theme?.colors?.stickyNoteYellow);
+// prints "#ffff88"
 ```
 
 Note that this will transitively pull in a lot of our build-time dependencies, resulting in bigger client-side bundle size. To avoid this, we recommend using a tool like `babel-plugin-preval` to generate a static version of your configuration at build-time.
