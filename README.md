@@ -33,8 +33,8 @@ For example, the `bg-red-500` class can be used to set the background color of a
 
 Utility classes in Tailwind CSS follow a consistent naming convention that makes it easy to understand what each class does. The naming convention consists of several parts:
 
-- **The first part indicates the CSS property that the class controls** (e.g. `bg` for background color, `text` for text color, `border` for border styles, etc.).
-- **The second part indicates the value that the class applies** (e.g. `red-500` for a specific shade of red, `lg` for large font size, `rounded` for rounded corners, etc.).
+- **The first part indicates the CSS property that the class controls** (e.g. `bg` for background color, `text` for text color, `p` for padding, etc.).
+- **The second part indicates the value that the class applies** (e.g. `red-500` for a specific shade of red, `lg` for large font size, `4` for 16px, etc.).
 - **Additional parts may be added to modify or extend the behavior of the class** (e.g. `hover:`, `focus:`, `active:`, `dark:`, etc.).
 
 [Back to Table of Contents](#table-of-contents)
@@ -48,7 +48,7 @@ Tailwind CSS utility classes are organized into several categories based on thei
 - **Spacing**: Utility classes for controlling the spacing of elements, such as padding, margin, and `* + *` (lobotomized owl).
 - **Sizing**: Utility classes for controlling the sizing of elements, such as width, height, max-width, max-height, min-width, and min-height.
 - **Typography**: Utility classes for controlling the typography of elements, such as font-size, font-weight, text-align, text-color, line-height, and text-decoration.
-- **Backgrounds**: Utility classes for controlling the backgrounds of elements, such as bg-color, bg-image, bg-size, and bg-position.
+- **Backgrounds**: Utility classes for controlling the backgrounds of elements, such as background-color, background-image, background-size, and background-position.
 - **Borders**: Utility classes for controlling the borders of elements, such as border, border-radius, border-color, and border-width.
 - **Effects**: Utility classes for adding effects to elements, such as box-shadow and opacity.
 - **Filters**: Utility classes for applying various filters to elements, such as blur, brightness, contrast, and grayscale.
@@ -57,7 +57,7 @@ Tailwind CSS utility classes are organized into several categories based on thei
 - **Transforms**: Utility classes for applying transforms to elements, such as rotate, scale, and translate.
 - **Interactivity**: Utility classes for adding interactivity to elements, such as cursor, caret-color, and scroll-behavior.
 - **SVG**: Utility classes for styling SVG elements, such as setting the fill or stroke color, opacity, or stroke width.
-- **Accessibility**: Ready-made utility classes to show an element to both sighted users and screen readers or to only show to screen readers.
+- **Accessibility**: Ready-made utility classes to show an element only to screen readers or to both screen readers and sighted users.
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -65,18 +65,16 @@ Tailwind CSS utility classes are organized into several categories based on thei
 
 In Tailwind CSS, modifiers are used to adjust the behavior or appearance of utility classes. Modifiers can be applied using a colon (:) followed by the modifier name. The categories of modifiers in Tailwind CSS include:
 
-- **Pseudo-element**: Modifiers for applying styles to pseudo-elements. A pseudo-element is used to style specified parts of an element.
-  - **Content**: Modifiers for inserting content before or after specific elements, such as `before:` and `after:`.
-  - **Style**: Modifiers for applying specific styles in an element, such as `first-line:`, `placeholder:`, `selection:`, and `backdrop:`.
-- **Pseudo-class**: Modifiers for applying styles to pseudo-classes. A pseudo-class is used to define a special state of an element.
-  - **Variants**: Modifiers for applying utility classes to specific elements based on their position within the document tree or their relationship with other elements, such as `first:`, `last:`, `even:`, and `odd:`.
-  - **State**: Modifiers for controlling the appearance of elements in different states, such as `hover:`, `focus:`, `valid:`, and `disabled:`.
-  - **Group**: Modifiers for controlling the appearance of elements based on parent state, such as `group-hover:`, `group-focus:`, and `group-active:`.
-  - **Peer**: Modifiers for controlling the appearance of elements based on sibling state, such as `peer-invalid:`, `peer-focus:`, `peer-required:`, and `peer-disabled:`.
-- **Responsive**: Modifier is used to apply utility classes at specific screen sizes, such as `sm:`, `md:`, `lg:`, and `xl:`.
-- **!important**: Modifier is used to override any previously defined styles, even if they have a higher specificity, by adding a `!` character to the beginning. The `!` always goes at the beginning of the utility name, after any variants, but before any prefix. For example `sm:hover:!tw-font-bold`.
-
-These modifiers provide additional flexibility and control when using the utility classes in Tailwind CSS.
+- **Pseudo-element**: Modifiers used to style a specific part of the selected element(s)..
+  - **Content**: Modifier for inserting content before or after specific elements, such as `before:` and `after:`.
+  - **Style**: Modifier for applying specific styles in an element, such as `first-line:`, `placeholder:`, `selection:`, and `backdrop:`.
+- **Pseudo-class**: Modifiers used to add styles to selectors, but only when those selectors meet certain conditions.
+  - **Variants**: Modifier for applying utility classes to specific elements based on their position within the document tree or their relationship with other elements, such as `first:`, `last:`, `even:`, and `odd:`.
+  - **State**: Modifier for controlling the appearance of elements in different states, such as `hover:`, `focus:`, `valid:`, and `disabled:`.
+  - **Group**: Modifier for controlling the appearance of elements based on parent state, such as `group-hover:`, `group-focus:`, and `group-active:`.
+  - **Peer**: Modifier for controlling the appearance of elements based on sibling state, such as `peer-invalid:`, `peer-focus:`, `peer-required:`, and `peer-disabled:`.
+- **Responsive**: Modifier used to apply utility classes at specific screen sizes, such as `sm:`, `md:`, `lg:`, and `xl:`.
+- **!important**: Modifier used to override any previously defined styles. The `!` always goes at the beginning of the utility name, after any variants, but before any prefix. For example `sm:hover:!tw-font-bold`.
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -84,13 +82,13 @@ These modifiers provide additional flexibility and control when using the utilit
 
 If you ever need to use a CSS property that Tailwind doesn’t include a utility for out of the box, you can also use square bracket notation to write completely arbitrary CSS.
 
-- **Arbitrary values**: When you find yourself really needing something like `top: 117px` to get a background image in just the right spot, use Tailwind’s square bracket notation to generate a class on the fly with any arbitrary value.
+- **Arbitrary values**: Use to style based off a custom value.
 
 ```HTML
 <div class="top-[117px] text-[#333333]"></div>
 ```
 
-- **Arbitrary properties**: If you ever need to use a CSS property that Tailwind doesn’t have a utility class for such as `mask-type`, you can also use square bracket notation to write completely arbitrary CSS. Provide both the property () and value separated by a colon inside the square brackets.
+- **Arbitrary properties**: Use to style based off of custom property and value.
 
 ```HTML
 <div class="[mask-type:luminance]"></div>
@@ -100,11 +98,12 @@ If you ever need to use a CSS property that Tailwind doesn’t include a utility
 
 ## Arbitrary CSS: Modifiers
 
-Tailwind CSS also let's you create custom selector modifiers. Simply wrap the custom modifier in square brackets and you're done!
+Tailwind CSS also let's you create custom selector modifiers.
 
-- **Arbitrary variants**: Use custom variant modifier to style element based on their position within the document tree or their relationship with other elements. This arbitrary modifier selects an element and applies an underline only when it is the third child.
+- **Arbitrary variants**: Use custom variant modifier to style element based on their position within the document tree or their relationship with other elements.
 
 ```JSX
+// applies an underline only to the third li
 <ul>
   {[1, 2, 3, 4, 5].map((item, i) => (
     <li className="[&:nth-child(3)]:underline" key={i}>
@@ -114,10 +113,10 @@ Tailwind CSS also let's you create custom selector modifiers. Simply wrap the cu
 </ul>
 ```
 
-- **Arbitrary groups**: Use custom `group-*` modifiers to style element based on parent state. Mark the parent with the `group` class. This arbitrary modifier applies `block` class only when parent has `is-published` class.
+- **Arbitrary groups**: Use custom `group-*` modifiers to style element based on parent state. Mark the parent with the `group` class.
 
 ```HTML
-// p element is hidden - can't see the word Published
+<!-- p element is hidden - can't see the word "Published" -->
 <div class="group">
   <p class="hidden group-[.is-published]:block">
     Published
@@ -126,7 +125,7 @@ Tailwind CSS also let's you create custom selector modifiers. Simply wrap the cu
 ```
 
 ```HTML
-// p element is shown - can see the word Published
+<!-- p element is shown - can see the word "Published" -->
 <div class="group is-published">
   <p class="hidden group-[.is-published]:block">
     Published
@@ -134,10 +133,10 @@ Tailwind CSS also let's you create custom selector modifiers. Simply wrap the cu
 </div>
 ```
 
-- **Arbitrary peers**: Use custom `peer-*` modifiers to style element based on sibling state. You can style an element based on the state of a sibling element. Mark the sibling with the `peer` class. This arbitrary modifier applies `block` class only when sibling has `show-sibling` class.
+- **Arbitrary peers**: Use custom `peer-*` modifiers to style element based on sibling state. You can style an element based on the state of a sibling element. Mark the sibling with the `peer` class. Ex. This arbitrary modifier applies `block` class only when sibling has `show-sibling` class.
 
 ```HTML
-// 2nd p element is not shown - can see the word First child only
+<!-- 2nd p element is not shown - can see the word "First child" only -->
 <div>
   <p class="peer">
     First child
@@ -149,7 +148,7 @@ Tailwind CSS also let's you create custom selector modifiers. Simply wrap the cu
 ```
 
 ```HTML
-// 2nd p element is shown - can see the words First child and Second child
+<!-- 2nd p element is shown - can see the words "First child" and "Second child" -->
 <div>
   <p class="peer show-sibling">
     First child
@@ -169,11 +168,11 @@ Many utilities in Tailwind share a common namespace but map to different CSS pro
 When using arbitrary values, Tailwind can generally handle this ambiguity automatically based on the value you pass in:
 
 ```HTML
-// Will generate a font-size utility
+<!-- Will generate a font-size utility -->
 <div class="text-[22px]">...</div>
 
-// Will generate a color utility
-<div class="text-[#BADA55]">...</div>
+<!-- Will generate a color utility -->
+<div class="text-[#327ba8]">...</div>
 ```
 
 [Back to Table of Contents](#table-of-contents)
@@ -191,6 +190,8 @@ Once you have made changes to your `tailwind.config.js` file, you need to recomp
 ```Javascript
 module.exports = {
   theme: {
+    // Define theme - anything added here will override the entire object in the theme
+    // Our theme will only have 2 colors - won't be able to access any other colors provided by Tailwind
     colors: {
       primary: {
         100: '#ebf8ff',
@@ -215,11 +216,17 @@ module.exports = {
         900: '#1a202c',
       },
     },
+    // Our theme will only have 2 fonts - won't be able to access any other fonts provided by Tailwind
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
       serif: ['Merriweather', 'serif'],
     },
+    // The extend property is used to add/override theme values or add custom values
     extend: {
+      colors: {
+        darkGray: "#263238",
+        stickyNoteYellow: "#ffff88",
+      },
       fontSize: {
         '2xl': '1.5rem',
         '3xl': '1.875rem',
@@ -231,19 +238,32 @@ module.exports = {
         gray: {
           600: '#4a5568',
           800: '#2d3748',
-      },
-      appName: 'Tailwind CSS 101',
-      appDescription: 'I am a website that summarizes Tailwind CSS'
+      }
     },
   },
-  variants: {},
   plugins: [],
 }
 ```
 
-In this example, the configuration file defines a custom color palette with shades of blue and gray, a custom font family with two font stacks, and custom font sizes, font weights, and text colors that extend the default theme.
+[Back to Table of Contents](#table-of-contents)
 
-The extend property is used to add or override theme values. For example, the `fontSize` property adds two custom font sizes (`2xl` and `3xl`), while the `fontWeight` property adds a custom font weight (`bold`). The `textColor` property adds custom gray shades (`600` and `800`) to the existing gray color palette and there are 2 custom values (`appName` and `appDescription`).
+## Referencing in JavaScript
+
+It can often be useful to reference your configuration values in your own client-side JavaScript — for example to access some of your theme values when dynamically applying inline styles in a React or Vue component.
+
+To make this easy, Tailwind provides a resolveConfig helper you can use to generate a fully merged version of your configuration object:
+
+```JSX
+import resolveConfig from "tailwindcss/resolveConfig";
+import tailwindConfig from "../tailwind.config.js";
+
+const config = resolveConfig(tailwindConfig);
+
+// prints "#ffff88"
+console.log(config?.theme?.colors?.stickyNoteYellow);
+```
+
+Note that this will transitively pull in a lot of our build-time dependencies, resulting in bigger client-side bundle size. To avoid this, we recommend using a tool like `babel-plugin-preval` to generate a static version of your configuration at build-time.
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -253,11 +273,11 @@ In CSS, the order of the rules in your stylesheet decides which declaration wins
 
 ```CSS
 .btn {
-  background: blue;
+  background-color: blue;
 }
 
 .bg-black {
-  background: black;
+  background-color: black;
 }
 ```
 
@@ -282,7 +302,7 @@ Being explicit about this makes it easier to understand how your styles will int
 
 Directives allow you to apply existing utility classes and configs to specific elements or contexts.
 
-- **`@tailwind`**: Use the @tailwind directive to inject each layer's (base, components, utilities) styles into your CSS. Adding it also injects any other styles registered by plugins.
+- **`@tailwind`**: Use the `@tailwind` directive to inject each layer's (base, components, utilities) styles into your CSS. Adding it also injects any other styles registered by plugins.
 
 ```CSS
 @tailwind base;
@@ -290,14 +310,14 @@ Directives allow you to apply existing utility classes and configs to specific e
 @tailwind utilities;
 ```
 
-- **`@layer`**: Use the @layer directive to add custom styles to a specific "layer". Any styles you add to Tailwind with @layer will automatically support Tailwind’s modifier syntax for handling things like hover states, responsive breakpoints, dark mode, and more.
+- **`@layer`**: Use the `@layer` directive to add custom styles to a specific "layer". Any styles you add to Tailwind with `@layer` will automatically support Tailwind’s modifier syntax for handling things like hover states, responsive breakpoints, dark mode, and more.
 
 ```CSS
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-// set default page styles (ex. body, h1, div, p)
+/* set default page styles (ex. body, h1, div, p) */
 @layer base {
   h1 {
     @apply text-2xl;
@@ -307,7 +327,7 @@ Directives allow you to apply existing utility classes and configs to specific e
   }
 }
 
-// create custom component styles (ex. card, btn, badge)
+/* create custom component styles (ex. card, btn, badge) */
 @layer components {
   .card {
     background-color: theme('colors.white');
@@ -315,14 +335,10 @@ Directives allow you to apply existing utility classes and configs to specific e
     padding: theme('spacing.6');
     box-shadow: theme('boxShadow.xl');
   }
-
-  .card {
-  @apply p-4 rounded-md shadow-md bg-white;
-}
 }
 
 
-// create custom utility classes
+/* create custom utility classes */
 @layer utilities {
   .content-auto {
     content-visibility: auto;
@@ -331,22 +347,26 @@ Directives allow you to apply existing utility classes and configs to specific e
 ```
 
 ```HTML
-// Access card component class
-<div class="card">Card content goes here</div>
+<!-- Use card component and utility classes -->
+<div class="card">
+  <h1>Card Title</h1>
+  <h2>Card Subtitle</h2>
+  <p class="content-auto">Card content</p>
+</div>
 ```
 
 - **`@apply`**: Allows you to apply existing utility classes to a single CSS class.
 
-```HTML
-// Give element a class name of your choice, ex. btn-primary
-<a href="#" class="btn-primary">Learn More</a>
-```
-
 ```CSS
-// Apply utility classes to btn-primary class
+/* Apply multiple utility classes to btn-primary class */
 .btn-primary {
   @apply bg-blue-500 text-white py-2 px-4 rounded;
 }
+```
+
+```HTML
+<!-- Use btn-primary class -->
+<a href="#" class="btn-primary">Learn More</a>
 ```
 
 - **`@config`**: Specify which config file Tailwind should use when compiling that CSS file. This is useful for projects that need to use different configuration files for different CSS entry points. Put the @config directive after @import statements.
@@ -361,22 +381,22 @@ Directives allow you to apply existing utility classes and configs to specific e
 
 ## Functions
 
-Many of the customizations that you make in `tailwind.config.js` can be accessed through various Tailwind functions. These functions are used in your CSS code to access and apply the values and styles defined in `tailwind.config.js`.
+Your theme and customizations in `tailwind.config.js`, can be accessed through Tailwind functions.
 
 - **`theme()`**: This function allows you to access and modify the default values of the theme in the `tailwind.config.js`, such as colors or font sizes.
 
 ```CSS
-// Use dot notation to access values:
+/* Use dot notation to access values */
 .big-text {
   font-size: theme("fontSize.2xl");
 }
 
-// To adjust the opacity of a color retrieved with theme, use a slash followed by the opacity value you want to use:
+/* To adjust the opacity of a color retrieved with theme, use a slash followed by the opacity value you want to use */
 .btn-blue {
   background-color: theme("colors.blue.500 / 75%");
 }
 
-// If you need to access a value that contains a dot (like the 2.5 value in the spacing scale), you can use square bracket notation:
+/* If you need to access a value that contains a dot (like the 2.5 value in the spacing scale), you can use square bracket notation */
 .content-area {
   height: calc(100vh - theme("spacing[2.5]"));
 }
@@ -410,9 +430,9 @@ Optimization is important in Tailwind CSS because it helps to reduce the size of
 
 - **Use customization**: Tailwind CSS allows for a lot of customization through the `tailwind.config.js` file. It's important to use this customization instead of directly adding styles to the project's CSS files to ensure that the custom styles are consistent with the rest of the project.
 - **Use `@apply` directive**: This directive lets you group multiple classes together and apply them to a single element. This can help reduce the amount of CSS you need to write and make your code more maintainable.
-- **Use the `@layer` directive**: This directive allows you to organize your CSS code into layers, which can improve the readability and maintainability of your code.
+- **Use the `@layer` directive**: This directive allows you to organize your CSS code into "layers", which can improve the readability and maintainability of your code.
 - **Create reusable components**: Instead of repeating the same combination of utility classes in multiple places, you can create reusable components that contain the necessary styles. For example, if you have a button that appears in multiple places, you can create a Button component that contains the necessary utility classes. This way, you can avoid duplicating code and ensure that your styles are consistent across your project.
-- **Use shorthand classes**: Tailwind provides several shorthand classes that let you apply multiple styles to a single element. For example, instead of writing `px-4 py-2 bg-white text-black font-bold`, you can write `p-2 bg-white text-black font-bold`.
+- **Use shorthand classes**: Tailwind provides several shorthand classes that let you apply multiple styles to a single element. For example, instead of writing `pt-4 pb-4 pr-4 pl-4`, you can write `p-4`.
 - **Use responsive classes selectively**: Tailwind provides a set of responsive classes that let you apply styles based on the screen size. However, it's important to use these classes selectively and only apply the styles that are needed for each breakpoint. This can help keep your CSS file size down.
 - **Purge unused styles**: By default, Tailwind includes a lot of classes that you may not need in your project. You can remove these unused classes by running the purge command during your build process. This will analyze your code and remove any unused classes from your CSS file.
 - **Use JIT mode**: Tailwind's just-in-time (JIT) mode generates styles on the fly as they are needed, which can help reduce the size of your CSS file. To use JIT mode, set mode: 'jit' in your Tailwind configuration file.
