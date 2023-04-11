@@ -9,5 +9,5 @@ h2 {
 }
 
 .code-gray {
-  background-color: theme("colors.gray.400 / 75%");
+  background-color: theme("colors.gray.400 / 55%");
 }
